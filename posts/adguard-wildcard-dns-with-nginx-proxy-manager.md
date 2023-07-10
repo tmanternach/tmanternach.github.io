@@ -32,6 +32,6 @@ Enter the IP address of your NPM host and click **Save**.
 
 There really isn't anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!
 
-Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So *adguard.home* and *dns.home* can both get me to the same place. This helps when I can't remember the name of a service, or when you can software you can keep using something like *dashboard.home* for your [dashboard of choice](https://github.com/bastienwirtz/homer).
+Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So *adguard.home* and *dns.home* can both get me to the same place. This helps when I can't remember the name of a service, or when you change software you can keep using something like *dashboard.home* for your [dashboard of choice](https://github.com/bastienwirtz/homer).
 
 
