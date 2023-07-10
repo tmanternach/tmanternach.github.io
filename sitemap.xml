@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>https://blog.trevormanternach.com/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/2023/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/archive.html</loc>
+  <lastmod>2023-07-10T02:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/categories/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/galleries/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/listings/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/posts/trying-out-nikola/</loc>
+  <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+</urlset>

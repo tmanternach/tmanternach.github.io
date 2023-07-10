@@ -1,0 +1,4 @@
+Sitemap: https://blog.trevormanternach.com/sitemapindex.xml
+
+User-Agent: *
+Host: blog.trevormanternach.com
