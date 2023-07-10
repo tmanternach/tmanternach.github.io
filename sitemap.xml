@@ -7,7 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://blog.trevormanternach.com/</loc>
-  <lastmod>2023-07-10T02:14:00Z</lastmod>
+  <lastmod>2023-07-10T03:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/2022/</loc>
+  <lastmod>2023-07-10T03:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/2023/</loc>
@@ -15,11 +19,23 @@
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/archive.html</loc>
-  <lastmod>2023-07-10T02:46:00Z</lastmod>
+  <lastmod>2023-07-10T03:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/categories/</loc>
-  <lastmod>2023-07-10T02:14:00Z</lastmod>
+  <lastmod>2023-07-10T03:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/categories/adguard/</loc>
+  <lastmod>2023-07-10T03:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/categories/dns/</loc>
+  <lastmod>2023-07-10T03:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/categories/tutorial/</loc>
+  <lastmod>2023-07-10T03:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/galleries/</loc>
@@ -28,6 +44,10 @@
  <url>
   <loc>https://blog.trevormanternach.com/listings/</loc>
   <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://blog.trevormanternach.com/posts/adguard-wildcard-dns-with-nginx-proxy-manager/</loc>
+  <lastmod>2023-07-10T03:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/trying-out-nikola/</loc>
