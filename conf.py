@@ -144,7 +144,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        ("/feed.xml", "RSS feed"),
     ),
 }
 
@@ -621,11 +621,11 @@ FRONT_INDEX_HEADER = {
 # URL_TYPE = 'rel_path'
 
 # Extension for RSS feed files
-# RSS_EXTENSION = ".xml"
+RSS_EXTENSION = ".xml"
 
 # RSS filename base (without extension); used for indexes and galleries.
 # (translatable)
-# RSS_FILENAME_BASE = "rss"
+RSS_FILENAME_BASE = "feed"
 
 # Final location for the blog main RSS feed is:
 # output / TRANSLATION[lang] / RSS_PATH / RSS_FILENAME_BASE RSS_EXTENSION
