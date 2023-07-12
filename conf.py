@@ -156,8 +156,9 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootblog4"
-
+#THEME = "bootblog4"
+THEME="trevor-bootblog4"
+#THEME="trevor-base"
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
 # as an accent color (the default ones don’t). Must be a HEX value.
@@ -284,7 +285,7 @@ TIMEZONE = "America/Denver"
 # 2 = using a string like “2 days ago” (JS, using Luxon)
 #
 # Your theme must support it, Bootstrap already does.
-# DATE_FANCINESS = 0
+DATE_FANCINESS = 2
 
 # Customize the locale/region used for a language.
 # For example, to use British instead of US English: LOCALES = {'en': 'en_GB'}
@@ -349,11 +350,11 @@ COMPILERS = {
 # Use date-based path when creating posts?
 # Can be enabled on a per-post basis with `nikola new_post -d`.
 # The setting is ignored when creating pages.
-# NEW_POST_DATE_PATH = False
+NEW_POST_DATE_PATH = False
 
 # What format to use when creating posts with date paths?
 # Default is '%Y/%m/%d', other possibilities include '%Y' or '%Y/%m'.
-# NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'
+NEW_POST_DATE_PATH_FORMAT = '%Y/%m/%d'
 
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
@@ -1225,7 +1226,6 @@ SEARCH_FORM = """
  <input type="hidden" name="k9" value="#D51920">
  <input type="hidden" name="kt" value="h">
  <input type="text" name="q" maxlength="255" placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
  </form>
  <!-- End of custom search -->
  """ % SITE_URL
@@ -1321,7 +1321,7 @@ SEARCH_FORM = """
 
 # Add any post types here that you want to be displayed without a title.
 # If your theme supports it, the titles will not be shown.
-# TYPES_TO_HIDE_TITLE = []
+TYPES_TO_HIDE_TITLE = ["micro"]
 
 # Additional metadata that is added to a post when creating a new_post
 # ADDITIONAL_METADATA = {}
@@ -1345,7 +1345,7 @@ SEARCH_FORM = """
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
 # USE_BUNDLES = True
-
+USE_BUNDLES = False
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
 
