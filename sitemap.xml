@@ -7,66 +7,58 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://blog.trevormanternach.com/</loc>
-  <lastmod>2023-07-12T12:40:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/2022/</loc>
-  <lastmod>2023-07-10T03:05:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/2023/</loc>
-  <lastmod>2023-07-10T02:14:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/archive.html</loc>
-  <lastmod>2023-07-12T12:49:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/categories/</loc>
-  <lastmod>2023-07-10T03:11:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/categories/adguard/</loc>
-  <lastmod>2023-07-10T03:11:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/categories/dns/</loc>
-  <lastmod>2023-07-10T03:11:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/categories/tutorial/</loc>
-  <lastmod>2023-07-10T03:11:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.trevormanternach.com/galleries/</loc>
-  <lastmod>2023-07-12T12:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.trevormanternach.com/listings/</loc>
-  <lastmod>2023-07-10T02:14:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</loc>
-  <lastmod>2023-07-12T02:17:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/2022/06/04/my-ipod-history/</loc>
-  <lastmod>2023-07-12T12:50:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/2022/08/18/1997-trevor-photo/</loc>
-  <lastmod>2023-07-12T02:16:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/2022/11/25/audiobooks/</loc>
-  <lastmod>2023-07-12T02:16:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://blog.trevormanternach.com/posts/2023/07/09/trying-out-nikola/</loc>
-  <lastmod>2023-07-12T02:15:00Z</lastmod>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/posts/my-ipod-history/</loc>
-  <lastmod>2023-07-12T12:47:00Z</lastmod>
+  <loc>https://blog.trevormanternach.com/posts/testing-nikola-on-a-second-computer/</loc>
+  <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
 </urlset>
