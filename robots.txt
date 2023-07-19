@@ -1,4 +1,4 @@
-Sitemap: https://blog.trevormanternach.com/sitemapindex.xml
+Sitemap: https://trevormanternach.com/sitemapindex.xml
 
 User-Agent: *
-Host: blog.trevormanternach.com
+Host: trevormanternach.com

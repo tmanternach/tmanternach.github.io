@@ -6,59 +6,63 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>https://blog.trevormanternach.com/</loc>
+  <loc>https://trevormanternach.com/</loc>
+  <lastmod>2023-07-17T13:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2022/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/2022/</loc>
+  <loc>https://trevormanternach.com/2023/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/2023/</loc>
+  <loc>https://trevormanternach.com/about/</loc>
+  <lastmod>2023-07-17T13:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/archive.html</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/categories/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/archive.html</loc>
-  <lastmod>2023-07-14T18:50:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.trevormanternach.com/categories/</loc>
+  <loc>https://trevormanternach.com/categories/adguard/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/categories/adguard/</loc>
+  <loc>https://trevormanternach.com/categories/dns/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/categories/dns/</loc>
+  <loc>https://trevormanternach.com/categories/tutorial/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/categories/tutorial/</loc>
+  <loc>https://trevormanternach.com/pages/about/</loc>
+  <lastmod>2023-07-17T13:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</loc>
+  <loc>https://trevormanternach.com/posts/2022/06/04/my-ipod-history/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/posts/2022/06/04/my-ipod-history/</loc>
+  <loc>https://trevormanternach.com/posts/2022/08/18/1997-trevor-photo/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/posts/2022/08/18/1997-trevor-photo/</loc>
+  <loc>https://trevormanternach.com/posts/2022/11/25/audiobooks/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://blog.trevormanternach.com/posts/2022/11/25/audiobooks/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.trevormanternach.com/posts/2023/07/09/trying-out-nikola/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://blog.trevormanternach.com/posts/testing-nikola-on-a-second-computer/</loc>
+  <loc>https://trevormanternach.com/posts/2023/07/09/trying-out-nikola/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
 </urlset>

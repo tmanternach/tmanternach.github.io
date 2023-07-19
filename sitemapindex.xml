@@ -6,23 +6,23 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://blog.trevormanternach.com/categories/adguard.xml</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
+  <loc>https://trevormanternach.com/categories/adguard.xml</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.trevormanternach.com/categories/dns.xml</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
+  <loc>https://trevormanternach.com/categories/dns.xml</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.trevormanternach.com/categories/tutorial.xml</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
+  <loc>https://trevormanternach.com/categories/tutorial.xml</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.trevormanternach.com/feed.xml</loc>
-  <lastmod>2023-07-14T18:50:00Z</lastmod>
+  <loc>https://trevormanternach.com/feed.xml</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://blog.trevormanternach.com/sitemap.xml</loc>
-  <lastmod>2023-07-14T18:50:00Z</lastmod>
+  <loc>https://trevormanternach.com/sitemap.xml</loc>
+  <lastmod>2023-07-19T12:56:00Z</lastmod>
  </sitemap>
 </sitemapindex>
