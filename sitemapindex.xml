@@ -7,22 +7,26 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://trevormanternach.com/categories/adguard.xml</loc>
-  <lastmod>2023-07-19T12:56:00Z</lastmod>
+  <lastmod>2023-07-23T14:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://trevormanternach.com/categories/dns.xml</loc>
-  <lastmod>2023-07-19T12:56:00Z</lastmod>
+  <lastmod>2023-07-23T14:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://trevormanternach.com/categories/tutorial.xml</loc>
-  <lastmod>2023-07-19T12:56:00Z</lastmod>
+  <lastmod>2023-07-23T14:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://trevormanternach.com/feed.xml</loc>
-  <lastmod>2023-07-19T12:56:00Z</lastmod>
+  <lastmod>2023-07-23T14:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://trevormanternach.com/galleries/feed.xml</loc>
+  <lastmod>2023-07-23T14:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://trevormanternach.com/sitemap.xml</loc>
-  <lastmod>2023-07-19T12:56:00Z</lastmod>
+  <lastmod>2023-07-23T14:55:00Z</lastmod>
  </sitemap>
 </sitemapindex>
