@@ -77,7 +77,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
-        ("/pages/about/", "About"),
+        ("/page/about/", "About"),
         ("/feed.xml", "RSS feed"),
     ),
 }
@@ -171,16 +171,16 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.rst", "", "post.tmpl"),
+    ("posts/*.md", "", "post.tmpl"),
+    ("posts/*.txt", "", "post.tmpl"),
+    ("posts/*.html", "", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
-    ("pages/*.md", "pages", "page.tmpl"),
-    ("pages/*.txt", "pages", "page.tmpl"),
-    ("pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.rst", "page", "page.tmpl"),
+    ("pages/*.md", "page", "page.tmpl"),
+    ("pages/*.txt", "page", "page.tmpl"),
+    ("pages/*.html", "page", "page.tmpl"),
 )
 
 
@@ -515,7 +515,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+INDEX_PATH = ""
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
