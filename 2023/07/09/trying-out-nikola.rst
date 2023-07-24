@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. pretty_url: False
 
 I discovered a new static site generator today, Nikola_.
 
