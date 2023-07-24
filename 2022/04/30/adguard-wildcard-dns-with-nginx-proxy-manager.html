@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AdGuard Wildcard DNS with Nginx Proxy Manager | Trevor Manternach</title>
-<link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/rst.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/theme.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/bootblog.css" rel="stylesheet" type="text/css">
-<link href="../../../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/bootblog.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../feed.xml">
-<link rel="canonical" href="https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/">
-<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Trevor Manternach">
-<link rel="next" href="../../../06/04/my-ipod-history/" title="My iPod history" type="text/html">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../feed.xml">
+<link rel="canonical" href="https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Trevor Manternach">
+<link rel="next" href="../../06/04/my-ipod-history.html" title="My iPod history" type="text/html">
 <meta property="og:site_name" content="Trevor Manternach">
 <meta property="og:title" content="AdGuard Wildcard DNS with Nginx Proxy Manager">
-<meta property="og:url" content="https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/">
+<meta property="og:url" content="https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html">
 <meta property="og:description" content="I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.
 Prerequisites
 
@@ -44,7 +44,7 @@ You need to be using AdGuard Home for DNS
             </button>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="../../../../">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../../">
 
             <span id="blog-title">Trevor Manternach</span>
         </a>
@@ -52,7 +52,7 @@ You need to be using AdGuard Home for DNS
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
 <li class="nav-item">
-    <a href="index.md" id="sourcelink" class="nav-link">Source</a>
+    <a href="adguard-wildcard-dns-with-nginx-proxy-manager.md" id="sourcelink" class="nav-link">Source</a>
     </li>
 
 
@@ -72,13 +72,13 @@ You need to be using AdGuard Home for DNS
 </header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
             <ul class="navbar-nav nav-fill d-flex w-100">
 <li class="nav-item">
-<a href="../../../../archive.html" class="nav-link">Archive</a>
+<a href="../../../archive.html" class="nav-link">Archive</a>
                 </li>
 <li class="nav-item">
-<a href="../../../../page/about/" class="nav-link">About</a>
+<a href="../../../page/about/" class="nav-link">About</a>
                 </li>
 <li class="nav-item">
-<a href="../../../../feed.xml" class="nav-link">RSS feed</a>
+<a href="../../../feed.xml" class="nav-link">RSS feed</a>
 
                 
             </li>
@@ -94,18 +94,18 @@ You need to be using AdGuard Home for DNS
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">AdGuard Wildcard DNS with Nginx Proxy Manager</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">AdGuard Wildcard DNS with Nginx Proxy Manager</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     Trevor Manternach
             </span></p>
             <p class="dateline">
-            <a href="." rel="bookmark">
+            <a href="#" rel="bookmark">
             <time class="published dt-published" datetime="2022-04-30T20:59:42-06:00" itemprop="datePublished" title="2022-04-30 20:59">2022-04-30 20:59</time></a>
             </p>
             
-        <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+        <p class="sourceline"><a href="adguard-wildcard-dns-with-nginx-proxy-manager.md" class="sourcelink">Source</a></p>
 
         </div>
         
@@ -120,22 +120,22 @@ You need to be using AdGuard Home for DNS
 </ul>
 <h4>AdGuard Home setup</h4>
 <p>In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.</p>
-<p><img alt="Screenshot of DNS rewrite options on AdGuard Home" src="../../../../images/adguard-1.png" title="Screenshot of DNS rewrite options on AdGuard Home"></p>
+<p><img alt="Screenshot of DNS rewrite options on AdGuard Home" src="../../../images/adguard-1.png" title="Screenshot of DNS rewrite options on AdGuard Home"></p>
 <p>Click <strong>Add DNS rewrite</strong> and enter something like <em>*.home</em> in the domain name field.</p>
 <p>Enter the IP address of your NPM host and click <strong>Save</strong>.</p>
 <h4>Nginx Proxy Manager</h4>
-<p><img alt="Screenshot of Nginx Proxy Manager" src="../../../../images/nginx-1.png" title="Screenshot of Nginx Proxy Manager"></p>
+<p><img alt="Screenshot of Nginx Proxy Manager" src="../../../images/nginx-1.png" title="Screenshot of Nginx Proxy Manager"></p>
 <p>There really isn't anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!</p>
 <p>Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So <em>adguard.home</em> and <em>dns.home</em> can both get me to the same place. This helps when I can't remember the name of a service, or when you change software you can keep using something like <em>dashboard.home</em> for your <a href="https://github.com/bastienwirtz/homer">dashboard of choice</a>.</p>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../../../categories/adguard/" rel="tag">adguard</a></li>
-            <li><a class="tag p-category" href="../../../../categories/dns/" rel="tag">dns</a></li>
-            <li><a class="tag p-category" href="../../../../categories/tutorial/" rel="tag">tutorial</a></li>
+<li><a class="tag p-category" href="../../../categories/adguard.html" rel="tag">adguard</a></li>
+            <li><a class="tag p-category" href="../../../categories/dns.html" rel="tag">dns</a></li>
+            <li><a class="tag p-category" href="../../../categories/tutorial.html" rel="tag">tutorial</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="next">
-                <a href="../../../06/04/my-ipod-history/" rel="next" title="My iPod history">Next post</a>
+                <a href="../../06/04/my-ipod-history.html" rel="next" title="My iPod history">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2023         <a href="mailto:trevor@trevormanternach.com">Trevor Manternach</a> 
@@ -146,7 +146,7 @@ You need to be using AdGuard Home for DNS
 </div>
 
 
-            <script src="../../../../assets/js/jquery.min.js"></script><script src="../../../../assets/js/popper.min.js"></script><script src="../../../../assets/js/bootstrap.min.js"></script><script src="../../../../assets/js/baguetteBox.min.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../../../assets/js/luxon.min.js"></script><script src="../../../../assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
+            <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/popper.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script src="https://polyfill.io/v3/polyfill.js?features=Intl.RelativeTimeFormat.%7Elocale.en"></script><script src="../../../assets/js/luxon.min.js"></script><script src="../../../assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
         luxon.Settings.defaultLocale = "en";
         fancydates(2, {"preset": false, "format": "yyyy-MM-dd HH:mm"});
         </script><!-- end fancy dates --><script>
