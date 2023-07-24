@@ -1,5 +1,5 @@
 .. title: 1997 Photo at computer
-.. slug: 1997-trevor-photo
+.. slug: the-earliest-photo
 .. date: 2022-08-18 10:35:00 UTC-06:00
 .. tags: 
 .. category: 
