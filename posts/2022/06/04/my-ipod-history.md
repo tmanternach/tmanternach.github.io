@@ -7,6 +7,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. pretty_url: False
 -->
 
 Last month Apple [announced](https://www.apple.com/newsroom/2022/05/the-music-lives-on/) the end of the iPod. I thought it might be fun to document my history with the product.

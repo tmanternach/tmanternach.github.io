@@ -7,6 +7,7 @@
 .. description: 
 .. type: text
 .. hidetitle:
+.. pretty_url: False
 
 The earliest photo I have of me at a computer. Circa 1997!
 

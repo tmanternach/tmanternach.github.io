@@ -6,6 +6,7 @@
 .. category: 
 .. link: 
 .. description: 
+.. pretty_url: False
 .. type: text
 -->
 
