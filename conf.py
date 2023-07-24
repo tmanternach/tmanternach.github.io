@@ -177,10 +177,10 @@ POSTS = (
     ("posts/*.html", "", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "page", "page.tmpl"),
-    ("pages/*.md", "page", "page.tmpl"),
-    ("pages/*.txt", "page", "page.tmpl"),
-    ("pages/*.html", "page", "page.tmpl"),
+    ("pages/*.rst", "", "page.tmpl"),
+    ("pages/*.md", "", "page.tmpl"),
+    ("pages/*.txt", "", "page.tmpl"),
+    ("pages/*.html", "", "page.tmpl"),
 )
 
 
@@ -593,7 +593,7 @@ ATOM_FILENAME_BASE = "feed"
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = [("about/", "/page/about/")]
+#REDIRECTIONS = [("about/", "/page/about/")]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
