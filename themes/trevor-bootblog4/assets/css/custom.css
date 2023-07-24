@@ -4,3 +4,6 @@ footer {
   padding-bottom: 25px;
   text-align: center;
 }
+a,a:visited,a:hover{
+  color: #eb3f00;
+}
