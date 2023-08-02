@@ -7,7 +7,75 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://trevormanternach.com/</loc>
-  <lastmod>2023-07-24T16:18:00Z</lastmod>
+  <lastmod>2023-08-02T22:13:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2016/</loc>
+  <lastmod>2023-08-02T22:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2016/12/27/ok-google-play-music-on-the-jukebox/</loc>
+  <lastmod>2023-08-02T22:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017-books/</loc>
+  <lastmod>2023-08-02T21:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/</loc>
+  <lastmod>2023-08-02T22:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/01/09/2017-books/</loc>
+  <lastmod>2023-08-02T22:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/2017-books/</loc>
+  <lastmod>2023-08-02T22:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/books-ive-read/</loc>
+  <lastmod>2023-08-02T22:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018-books-ive-read/</loc>
+  <lastmod>2023-08-02T22:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018/</loc>
+  <lastmod>2023-08-02T22:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018/2018-books-ive-read/</loc>
+  <lastmod>2023-08-02T22:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018/books-ive-read/</loc>
+  <lastmod>2023-08-02T22:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2019-books-ive-read/</loc>
+  <lastmod>2023-08-02T22:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2019/</loc>
+  <lastmod>2023-08-02T22:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2019/books-ive-read/</loc>
+  <lastmod>2023-08-02T22:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2020-books-ive-read/</loc>
+  <lastmod>2023-08-02T22:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2020/</loc>
+  <lastmod>2023-08-02T22:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2020/books-ive-read/</loc>
+  <lastmod>2023-08-02T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/</loc>
@@ -15,7 +83,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-08-02T22:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/06/04/my-ipod-history.html</loc>
@@ -35,7 +103,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/07/09/trying-out-nikola.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-08-02T22:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/about/</loc>
@@ -43,15 +111,27 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/archive.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-08-02T22:17:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/books-ive-read/</loc>
+  <lastmod>2023-08-02T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/</loc>
-  <lastmod>2023-07-24T14:00:00Z</lastmod>
+  <lastmod>2023-08-02T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/adguard/</loc>
   <lastmod>2023-07-24T14:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/categories/books/</loc>
+  <lastmod>2023-08-02T21:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/categories/cat_books/</loc>
+  <lastmod>2023-08-02T22:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/dns/</loc>
@@ -68,5 +148,9 @@
  <url>
   <loc>https://trevormanternach.com/listings/</loc>
   <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/ok-google-play-music-on-the-jukebox/</loc>
+  <lastmod>2023-08-02T22:11:00Z</lastmod>
  </url>
 </urlset>
