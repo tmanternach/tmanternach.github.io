@@ -7,7 +7,47 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://trevormanternach.com/</loc>
-  <lastmod>2023-07-17T13:12:00Z</lastmod>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2016/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2016/12/27/ok-google-play-music-on-the-jukebox/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2017/books-ive-read/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2018/books-ive-read/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2019/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2019/books-ive-read/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2020/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2020/books-ive-read/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/</loc>
@@ -15,7 +55,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html</loc>
-  <lastmod>2023-07-27T13:24:00Z</lastmod>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/06/04/my-ipod-history.html</loc>
@@ -43,15 +83,23 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/archive.html</loc>
-  <lastmod>2023-08-04T21:37:00Z</lastmod>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/adguard/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/categories/books/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/categories/cat_books/</loc>
+  <lastmod>2023-08-04T22:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/dns/</loc>
@@ -59,30 +107,6 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/tutorial/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/pages/about/</loc>
-  <lastmod>2023-07-17T13:09:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/posts/2022/06/04/my-ipod-history/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/posts/2022/08/18/1997-trevor-photo/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/posts/2022/11/25/audiobooks/</loc>
-  <lastmod>2023-07-14T18:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://trevormanternach.com/posts/2023/07/09/trying-out-nikola/</loc>
   <lastmod>2023-07-14T18:44:00Z</lastmod>
  </url>
 </urlset>
