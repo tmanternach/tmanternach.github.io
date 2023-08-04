@@ -10,5 +10,4 @@
 
 I discovered a new static site generator today, Nikola_.
 
-
 .. _Nikola: https://getnikola.com/
