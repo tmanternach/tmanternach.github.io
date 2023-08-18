@@ -17,7 +17,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="feed.xml">
 <link rel="canonical" href="https://trevormanternach.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2023/08/04/home-assistant-quick-bar/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -81,7 +81,55 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2023/08/04/home-assistant-quick-bar/" class="u-url">Home Assistant Quick Bar</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/" class="u-url">Control Palo Alto GlobalProtect VPN using AppleScript</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Trevor Manternach
+                    </span></p>
+            <p class="dateline">
+            <a href="2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-08-17T19:35:22-06:00" itemprop="datePublished" title="2023-08-17 19:35">2023-08-17 19:35</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <p>I know it's a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN "automatically". I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!</p>
+<p>This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).:</p>
+<pre class="literal-block">(*
+Toggle GlobalProtect VPN with AppleScript
+Tested using macOS Ventura 13.4.1 and GlobalProtect version 6.2.0-89
+Written by Trevor Manternach, August 2023.
+*)
+
+tell application "System Events" to tell process "GlobalProtect"
+  click menu bar item 1 of menu bar 2
+  set statusText to name of static text 1 of window 1
+  if statusText is "Not Connected" then
+    # GlobalProtect is disconnected, so let's connect
+    click button "Connect" of window 1
+    set entireContents to entire contents of window 1
+  else if statusText is "Connected" then
+    # GlobalProtect is connected, so let's disconnect
+    set windowText to entire contents of window 1
+    repeat with theItem in windowText
+      if (class of theItem is button) then
+        if (value of attribute "AXTitle" of theItem is "Disconnect") then
+          # We found a Disconnect button on the main page, let's click it.
+          click theItem
+          exit repeat
+        else
+          # We did not find a Disconnect button on the main page, let's hope there is one in the Settings Menu.
+          click button "Global Protect Options Menu" of window 1
+          click menu item "Disconnect" of menu "Global Protect Options Menu" of button "Global Protect Options Menu" of window 1
+          exit repeat
+        end if
+      end if
+    end repeat
+  end if
+  click menu bar item 1 of menu bar 2
+end tell</pre>
+<p>I also have this hosted as a <a class="reference external" href="https://gist.github.com/tmanternach/cbd4c213eab8569e38d6cd021b6255e5">gist</a> on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2023/08/04/home-assistant-quick-bar/" class="u-url">Home Assistant Quick Bar</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Trevor Manternach
@@ -270,27 +318,6 @@
 128 pages. Started September 22nd. Finished September 25th.</p>
 <p><a href="https://www.amazon.com/Tipping-Point-Little-Things-Difference/dp/B000OYD8T2"><em>The Tipping Point</em></a><br>
 8 hours 33 minutes. Started October 15th. Finished December 11th.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2017/books-ive-read/" class="u-url">2017 Books I've Read</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Trevor Manternach
-                    </span></p>
-            <p class="dateline">
-            <a href="2017/books-ive-read/" rel="bookmark">
-            <time class="published dt-published" datetime="2017-01-01T15:09:37-07:00" itemprop="datePublished" title="2017-01-01 15:09">2017-01-01 15:09</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <p>This is my first year trying this. I'm going to keep a running list of the books I read this year.</p>
-<p><a href="https://www.amazon.com/Then-There-Were-None-ebook/dp/B000FC1RCI/"><em>And Then There Were None</em></a>
-257 pages. Started January 1st. Finished January 7th.</p>
-<p><a href="https://www.amazon.com/gp/product/B01N1F24U7/"><em>How to Win Friends and Influence People</em></a>
-226 pages. Started January 21st. Finished February 20th.</p>
-<p><a href="https://www.amazon.com/gp/product/B00K0OI42W/"><em>To Kill a Mockingbird</em></a>
-385 pages. Started February 22nd. Finished March 16th.</p>
-<p><a href="https://www.amazon.com/This-Life-Live-Extraordinary-Ordinary/dp/B01MU00N4Z/"><em>This Life I Live</em></a>
-6 hours 4 minutes. Started March 12th. Finished March 18th.</p>
                 </div>
             </article>
 </div>
