@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://trevormanternach.com/</loc>
-  <lastmod>2023-08-18T01:41:00Z</lastmod>
+  <lastmod>2023-11-03T22:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2016/</loc>
@@ -91,7 +91,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/archive.html</loc>
-  <lastmod>2023-08-18T01:41:00Z</lastmod>
+  <lastmod>2023-11-03T22:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/</loc>
@@ -118,19 +118,19 @@
   <lastmod>2023-07-24T14:00:00Z</lastmod>
  </url>
  <url>
-  <loc>https://trevormanternach.com/control-palo-alto-globalprotect-vpn-using-applescript/</loc>
-  <lastmod>2023-08-18T01:41:00Z</lastmod>
- </url>
- <url>
   <loc>https://trevormanternach.com/galleries/</loc>
   <lastmod>2023-07-12T12:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/index-1.html</loc>
-  <lastmod>2023-08-18T01:41:00Z</lastmod>
+  <lastmod>2023-11-03T22:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/listings/</loc>
   <lastmod>2023-07-10T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</loc>
+  <lastmod>2023-11-03T22:50:00Z</lastmod>
  </url>
 </urlset>

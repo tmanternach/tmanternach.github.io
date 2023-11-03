@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trevor Manternach</title><link>https://trevormanternach.com/</link><description>This is my personal weblog.</description><atom:link href="https://trevormanternach.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:trevor@trevormanternach.com"&gt;Trevor Manternach&lt;/a&gt; </copyright><lastBuildDate>Fri, 18 Aug 2023 02:19:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Control Palo Alto GlobalProtect VPN using AppleScript</title><link>https://trevormanternach.com/2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I know it's a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN "automatically". I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trevor Manternach</title><link>https://trevormanternach.com/</link><description>This is my personal weblog.</description><atom:link href="https://trevormanternach.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:trevor@trevormanternach.com"&gt;Trevor Manternach&lt;/a&gt; </copyright><lastBuildDate>Fri, 03 Nov 2023 23:03:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python script to retrieve DHCP leases from Palo Alto firewall</title><link>https://trevormanternach.com/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.&lt;/p&gt;
+&lt;p&gt;To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like &lt;cite&gt;jq&lt;/cite&gt; to filter it quickly.&lt;/p&gt;
+&lt;p&gt;Here is the code:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;import requests
+import json
+from xmltodict import parse, ParsingInterrupted
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
+host = "192.168.2.1" # IP of Palo-Alto firewall goes here.
+key = "KEY_GOES_HERE" # Run `curl -X GET 'https://&amp;lt;host&amp;gt;/api/?type=keygen&amp;amp;user=&amp;lt;username&amp;gt;&amp;amp;password=&amp;lt;password&amp;gt;'` to create API key.
+interface = "ethernet1/2" # can also use "all"
+
+def get_dhcp_leases(host, key, interface):
+url = "https://{host}/api/?type=op&amp;amp;cmd=&amp;lt;show&amp;gt;&amp;lt;dhcp&amp;gt;&amp;lt;server&amp;gt;&amp;lt;lease&amp;gt;&amp;lt;interface&amp;gt;{interface}&amp;lt;/interface&amp;gt;&amp;lt;/lease&amp;gt;&amp;lt;/server&amp;gt;&amp;lt;/dhcp&amp;gt;&amp;lt;/show&amp;gt;&amp;amp;key={key}".format(host=host, key=key, interface=interface)
+response = requests.get(url,verify=False)
+return response
+
+if __name__ == "__main__":
+dhcp_leases = get_dhcp_leases(host, key, interface)
+data = parse(dhcp_leases.content)
+entries = data['response']['result']
+print(json.dumps(entries, indent=4))&lt;/pre&gt;
+&lt;p&gt;I also have this hosted as a &lt;a class="reference external" href="https://gist.github.com/tmanternach/21e3bba23261cbd5bacba2e50588acf6"&gt;gist&lt;/a&gt; on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!&lt;/p&gt;</description><guid>https://trevormanternach.com/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</guid><pubDate>Fri, 03 Nov 2023 22:50:34 GMT</pubDate></item><item><title>Control Palo Alto GlobalProtect VPN using AppleScript</title><link>https://trevormanternach.com/2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I know it's a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN "automatically". I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!&lt;/p&gt;
 &lt;p&gt;This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;(*
 Toggle GlobalProtect VPN with AppleScript
@@ -91,19 +115,4 @@ end tell&lt;/pre&gt;
 &lt;p&gt;&lt;a href="https://smile.amazon.com/Feather-Thief-Obsession-Natural-History/dp/1101981636/" target="_blank"&gt;&lt;em&gt;The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
 336 pages. Started November 27th. Finished December 13th.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://smile.amazon.com/1984-George-Orwell-ebook/dp/B0811YH6RT/" target="_blank"&gt;&lt;em&gt;1984&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-326 pages. Started December 16th. Finished January 9th.&lt;/p&gt;</description><guid>https://trevormanternach.com/2019/books-ive-read/</guid><pubDate>Tue, 01 Jan 2019 22:06:36 GMT</pubDate></item><item><title>2018 Books I've Read</title><link>https://trevormanternach.com/2018/books-ive-read/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;&lt;a href="http://a.co/es7D6SZ"&gt;&lt;em&gt;Evicted. Poverty and Profit in the American City&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-448 pages. Started April 11th. Finished June 3rd.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://a.co/h3aF1ZJ"&gt;&lt;em&gt;A Higher Loyalty: Truth, Lies, and Leadership&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-312 pages. Started June 3rd. Finished June 11th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://a.co/6RwHWwH"&gt;&lt;em&gt;Turtles All The Way Down&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-304 pages. Started June 12th. Finished June 16th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/dp/B07BKPF9BF/"&gt;&lt;em&gt;The Hellfire Club&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-9 hours 58 minutes. Started July 6th. Finished July 11th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://a.co/d/47NMz23"&gt;&lt;em&gt;Of Mice and Men&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-112 pages. Started September 3rd. Finished September 7th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://a.co/d/fRUUJac"&gt;&lt;em&gt;Fear: Trump in the White House&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-12 hours 20 minutes. Started September 11th. Finished September 17th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Old-Man-Sea-Ernest-Hemingway-ebook-dp-B000FC0SH8/dp/B000FC0SH8/"&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-128 pages. Started September 22nd. Finished September 25th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Tipping-Point-Little-Things-Difference/dp/B000OYD8T2"&gt;&lt;em&gt;The Tipping Point&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-8 hours 33 minutes. Started October 15th. Finished December 11th.&lt;/p&gt;</description><category>books</category><guid>https://trevormanternach.com/2018/books-ive-read/</guid><pubDate>Mon, 01 Jan 2018 22:03:50 GMT</pubDate></item></channel></rss>
+326 pages. Started December 16th. Finished January 9th.&lt;/p&gt;</description><guid>https://trevormanternach.com/2019/books-ive-read/</guid><pubDate>Tue, 01 Jan 2019 22:06:36 GMT</pubDate></item></channel></rss>
