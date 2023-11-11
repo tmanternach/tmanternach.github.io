@@ -17,7 +17,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="feed.xml">
 <link rel="canonical" href="https://trevormanternach.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="routing-wireguard-networks-with-ospf-on-linux/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -81,7 +81,55 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/" class="u-url">Python script to retrieve DHCP leases from Palo Alto firewall</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="routing-wireguard-networks-with-ospf-on-linux/" class="u-url">Routing Wireguard networks with OSPF on Linux</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Trevor Manternach
+                    </span></p>
+            <p class="dateline">
+            <a href="routing-wireguard-networks-with-ospf-on-linux/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-11-10T16:46:25-07:00" itemprop="datePublished" title="2023-11-10 16:46">2023-11-10 16:46</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <p>I have a couple of Linux servers whose main purpose is to serve as a <a class="reference external" href="https://en.wikipedia.org/wiki/WireGuard">Wireguard</a> server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site's local network.</p>
+<p>Wireguard makes this easy to do, you just add the /24 network as an "AllowedIP" for that peer. Wireguard does the work of adding that route to the routing table on the Linux server itself. If this Wireguard server is part of a more complex network, though, you need to be sending these remote networks to your Wireguard server so everyone can access them, not just those using Wireguard. I have been forced to add static routes on my main router to point those networks to my Wireguard servers.</p>
+<p>Enter OSPF! If you are reading this, I am going to assume you know what OSPF is and why it's preferred over static routing. What follows is the steps I took to get my Wireguard "AllowedIPs" network automatically advertised to my main router using OSPF.</p>
+<section id="install-frr"><h2>Install FRR</h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/FRRouting">FRR</a> is a Linux package that implements a lot of networking routing protocols. On your server running Wireguard (I'm assuming Debian/Ubuntu), running  <code class="docutils literal">apt get install <span class="pre">-y</span> frr</code>  gets everything you need installed. This includes a <code class="docutils literal">vtysh</code> command that dumps you into a Cisco IOS-like terminal to configure your OSPF routing.</p>
+</section><section id="enable-ospf-daemon"><h2>Enable OSPF daemon</h2>
+<p>Before configuring OSPF, you must enable the ospfd daemon in the FRR config. Edit <code class="docutils literal">/etc/frr/daemons</code> and change the <cite>ospfd=no`</cite> line to read <code class="docutils literal">ospfd=yes</code>. Then <code class="docutils literal">systemctl restart frr</code> is needed to restart FRR with OSPF enabled.</p>
+</section><section id="configure-ospf-inside-frr"><h2>Configure OSPF inside FRR</h2>
+<p>Run <code class="docutils literal">vtysh</code> to enter the FRR VTY interface. <code class="docutils literal">config terminal</code> to enter configuration mode. Here is the simplest configuration required to enable OSPF:</p>
+<pre class="literal-block">interface ens160
+  ip ospf network point-to-point
+!
+router ospf
+  ospf router-id 192.168.0.0
+  redistribute kernel
+  redistribute connected
+  network 192.168.0.0/31 area 0</pre>
+<p>Here is the same config with my comments explaining the important parts:</p>
+<pre class="literal-block">interface ens160 # this is your linux interface that is facing your main router.
+  ip ospf network point-to-point # I am using a point-to-point style OSPF network, yours might be a broadcast type.
+!
+router ospf
+  ospf router-id 192.168.0.0 # this could be anything, but traditionally this is your LAN IP of this wireguard server
+  redistribute kernel # this was the tricky part. This is required to insert the Wireguard "AllowedIPs" networks into OSPF
+  redistribute connected # this is required to insert your wg0 (and other) networks in OSPF
+  network 192.168.0.0/31 area 0 # this is your LAN network for this wireguard server. Whatever is assigned to ens160 in my case. This is required to establish a neighbor relationship with my router.</pre>
+<p>This guide doesn't cover any of the OSPF configuration on your main router. There are far too many different routers out there to even attempt to cover. The main trick to getting all of this working was stumbling across the <code class="docutils literal">redistribute kernel</code> command. I was familiar with the <code class="docutils literal">redisribute static</code> and <code class="docutils literal">redistribute connected</code> commands from administering Cisco IOS, but the way that Wireguard inserts these routes into the routing table requires use of this <code class="docutils literal">redistribute kernel</code> command.</p>
+</section><section id="save-your-changes"><h2>Save your changes</h2>
+<p>That's it! You can <code class="docutils literal">end</code> and then <code class="docutils literal">write memory</code> to save your configuration to <code class="docutils literal">/etc/frr/frr.conf</code>. If you miss this part, all of this configuration will be erased when FRR is restarted.</p>
+</section><section id="troubleshooting"><h2>Troubleshooting</h2>
+<p>Here are a couple of commands I used in the <code class="docutils literal">vtysh</code> interface to verify my configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal">show ip ospf neighbor</code> - this should return a record showing your neighbor relationship with your main router</p></li>
+<li><p><code class="docutils literal">show ip route kernel</code> - this should return all of your AllowedIPs networks that you have configured in Wireguard. These are the networks we are redistributing over OSPF.</p></li>
+<li><p><code class="docutils literal">show ip ospf interface</code> - this should return a record indicating <code class="docutils literal">ens160 is up</code>, or whatever your LAN interface on your Wireguard server is. You can also see neighbor count here, which should be 1 in a point-to-point OSPF network.</p></li>
+</ul></section>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/" class="u-url">Python script to retrieve DHCP leases from Palo Alto firewall</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Trevor Manternach
@@ -295,38 +343,6 @@ end tell</pre>
 144 pages. Started November 26th. Finished November 28th.</p>
 <p><a href="https://www.goodreads.com/book/show/36204293-the-war-on-normal-people" target="_blank"><em>The War on Normal People</em></a><br>
 304 pages. Started November 28th. Finished December 2nd.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2019/books-ive-read/" class="u-url">2019 Books I've Read</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Trevor Manternach
-                    </span></p>
-            <p class="dateline">
-            <a href="2019/books-ive-read/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-01-01T16:06:36-06:00" itemprop="datePublished" title="2019-01-01 16:06">2019-01-01 16:06</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <p><a href="https://smile.amazon.com/Animal-Farm-Classics-George-Orwell-ebook/dp/B07JH73R6T/" target="_blank"><em>Animal Farm</em></a><br>
-140 pages. Started December 29th. Finished January 9th.</p>
-<p><a href="https://www.amazon.com/Doing-Justice-Prosecutors-Thoughts-Punishment/dp/0525521127" target="_blank"><em>Doing Justice</em></a><br>
-368 pages. Started April 15th. Finished April 27th.</p>
-<p><a href="https://www.amazon.com/Pound-Foolish-Exposing-Personal-Industry/dp/B00BI6JFJM/" target="_blank"><em>Pound Foolish</em></a><br>
-9 hours 7 minutes. Started May 2nd. Finished May 14th.</p>
-<p><a href="https://smile.amazon.com/dp/B004DEPHGQ/" target="_blank"><em>Everything Is Obvious: *Once You Know the Answer</em></a><br>
-368 pages. Started May 15th. Finished May 31st.</p>
-<p><a href="https://smile.amazon.com/Absolutely-Remarkable-Thing-Novel-ebook/dp/B0796DR2XV/" target="_blank"><em>An Absolutely Remarkable Thing</em></a><br>
-352 pages. Started June 1st. Finished June 12th.</p>
-<p><a href="https://smile.amazon.com/President-Missing-Novel-James-Patterson-ebook/dp/B072F3MYRH/" target="_blank"><em>The President is Missing</em></a><br>
-527 pages. Started June 16th. Finished June 24th.</p>
-<p><a href="https://smile.amazon.com/Paper-Towns-John-Green/dp/0525478183/" target="_blank"><em>Paper Towns</em></a><br>
-305 pages. Started June 25th. Finished July 9th.</p>
-<p><a href="https://www.amazon.com/Permanent-Record-Edward-Snowden/dp/1250237238/" target="_blank"><em>Permanent Record</em></a><br>
-352 pages. Started December 1st. Finished December 4th.</p>
-<p><a href="https://smile.amazon.com/Feather-Thief-Obsession-Natural-History/dp/1101981636/" target="_blank"><em>The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century</em></a><br>
-336 pages. Started November 27th. Finished December 13th.</p>
-<p><a href="https://smile.amazon.com/1984-George-Orwell-ebook/dp/B0811YH6RT/" target="_blank"><em>1984</em></a><br>
-326 pages. Started December 16th. Finished January 9th.</p>
                 </div>
             </article>
 </div>

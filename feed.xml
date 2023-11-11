@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trevor Manternach</title><link>https://trevormanternach.com/</link><description>This is my personal weblog.</description><atom:link href="https://trevormanternach.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:trevor@trevormanternach.com"&gt;Trevor Manternach&lt;/a&gt; </copyright><lastBuildDate>Fri, 03 Nov 2023 23:03:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python script to retrieve DHCP leases from Palo Alto firewall</title><link>https://trevormanternach.com/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trevor Manternach</title><link>https://trevormanternach.com/</link><description>This is my personal weblog.</description><atom:link href="https://trevormanternach.com/feed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:trevor@trevormanternach.com"&gt;Trevor Manternach&lt;/a&gt; </copyright><lastBuildDate>Sat, 11 Nov 2023 00:12:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Routing Wireguard networks with OSPF on Linux</title><link>https://trevormanternach.com/routing-wireguard-networks-with-ospf-on-linux/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I have a couple of Linux servers whose main purpose is to serve as a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/WireGuard"&gt;Wireguard&lt;/a&gt; server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site's local network.&lt;/p&gt;
+&lt;p&gt;Wireguard makes this easy to do, you just add the /24 network as an "AllowedIP" for that peer. Wireguard does the work of adding that route to the routing table on the Linux server itself. If this Wireguard server is part of a more complex network, though, you need to be sending these remote networks to your Wireguard server so everyone can access them, not just those using Wireguard. I have been forced to add static routes on my main router to point those networks to my Wireguard servers.&lt;/p&gt;
+&lt;p&gt;Enter OSPF! If you are reading this, I am going to assume you know what OSPF is and why it's preferred over static routing. What follows is the steps I took to get my Wireguard "AllowedIPs" network automatically advertised to my main router using OSPF.&lt;/p&gt;
+&lt;section id="install-frr"&gt;
+&lt;h2&gt;Install FRR&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/FRRouting"&gt;FRR&lt;/a&gt; is a Linux package that implements a lot of networking routing protocols. On your server running Wireguard (I'm assuming Debian/Ubuntu), running  &lt;code class="docutils literal"&gt;apt get install &lt;span class="pre"&gt;-y&lt;/span&gt; frr&lt;/code&gt;  gets everything you need installed. This includes a &lt;code class="docutils literal"&gt;vtysh&lt;/code&gt; command that dumps you into a Cisco IOS-like terminal to configure your OSPF routing.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="enable-ospf-daemon"&gt;
+&lt;h2&gt;Enable OSPF daemon&lt;/h2&gt;
+&lt;p&gt;Before configuring OSPF, you must enable the ospfd daemon in the FRR config. Edit &lt;code class="docutils literal"&gt;/etc/frr/daemons&lt;/code&gt; and change the &lt;cite&gt;ospfd=no`&lt;/cite&gt; line to read &lt;code class="docutils literal"&gt;ospfd=yes&lt;/code&gt;. Then &lt;code class="docutils literal"&gt;systemctl restart frr&lt;/code&gt; is needed to restart FRR with OSPF enabled.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="configure-ospf-inside-frr"&gt;
+&lt;h2&gt;Configure OSPF inside FRR&lt;/h2&gt;
+&lt;p&gt;Run &lt;code class="docutils literal"&gt;vtysh&lt;/code&gt; to enter the FRR VTY interface. &lt;code class="docutils literal"&gt;config terminal&lt;/code&gt; to enter configuration mode. Here is the simplest configuration required to enable OSPF:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;interface ens160
+  ip ospf network point-to-point
+!
+router ospf
+  ospf router-id 192.168.0.0
+  redistribute kernel
+  redistribute connected
+  network 192.168.0.0/31 area 0&lt;/pre&gt;
+&lt;p&gt;Here is the same config with my comments explaining the important parts:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;interface ens160 # this is your linux interface that is facing your main router.
+  ip ospf network point-to-point # I am using a point-to-point style OSPF network, yours might be a broadcast type.
+!
+router ospf
+  ospf router-id 192.168.0.0 # this could be anything, but traditionally this is your LAN IP of this wireguard server
+  redistribute kernel # this was the tricky part. This is required to insert the Wireguard "AllowedIPs" networks into OSPF
+  redistribute connected # this is required to insert your wg0 (and other) networks in OSPF
+  network 192.168.0.0/31 area 0 # this is your LAN network for this wireguard server. Whatever is assigned to ens160 in my case. This is required to establish a neighbor relationship with my router.&lt;/pre&gt;
+&lt;p&gt;This guide doesn't cover any of the OSPF configuration on your main router. There are far too many different routers out there to even attempt to cover. The main trick to getting all of this working was stumbling across the &lt;code class="docutils literal"&gt;redistribute kernel&lt;/code&gt; command. I was familiar with the &lt;code class="docutils literal"&gt;redisribute static&lt;/code&gt; and &lt;code class="docutils literal"&gt;redistribute connected&lt;/code&gt; commands from administering Cisco IOS, but the way that Wireguard inserts these routes into the routing table requires use of this &lt;code class="docutils literal"&gt;redistribute kernel&lt;/code&gt; command.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="save-your-changes"&gt;
+&lt;h2&gt;Save your changes&lt;/h2&gt;
+&lt;p&gt;That's it! You can &lt;code class="docutils literal"&gt;end&lt;/code&gt; and then &lt;code class="docutils literal"&gt;write memory&lt;/code&gt; to save your configuration to &lt;code class="docutils literal"&gt;/etc/frr/frr.conf&lt;/code&gt;. If you miss this part, all of this configuration will be erased when FRR is restarted.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="troubleshooting"&gt;
+&lt;h2&gt;Troubleshooting&lt;/h2&gt;
+&lt;p&gt;Here are a couple of commands I used in the &lt;code class="docutils literal"&gt;vtysh&lt;/code&gt; interface to verify my configuration.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;show ip ospf neighbor&lt;/code&gt; - this should return a record showing your neighbor relationship with your main router&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;show ip route kernel&lt;/code&gt; - this should return all of your AllowedIPs networks that you have configured in Wireguard. These are the networks we are redistributing over OSPF.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;show ip ospf interface&lt;/code&gt; - this should return a record indicating &lt;code class="docutils literal"&gt;ens160 is up&lt;/code&gt;, or whatever your LAN interface on your Wireguard server is. You can also see neighbor count here, which should be 1 in a point-to-point OSPF network.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;</description><guid>https://trevormanternach.com/routing-wireguard-networks-with-ospf-on-linux/</guid><pubDate>Fri, 10 Nov 2023 23:46:25 GMT</pubDate></item><item><title>Python script to retrieve DHCP leases from Palo Alto firewall</title><link>https://trevormanternach.com/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.&lt;/p&gt;
 &lt;p&gt;To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like &lt;cite&gt;jq&lt;/cite&gt; to filter it quickly.&lt;/p&gt;
 &lt;p&gt;Here is the code:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;import requests
@@ -96,23 +141,4 @@ end tell&lt;/pre&gt;
 &lt;p&gt;&lt;a href="https://www.goodreads.com/book/show/244909.The_Conscience_of_a_Conservative" target="_blank"&gt;&lt;em&gt;The Conscience of a Conservative&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
 144 pages. Started November 26th. Finished November 28th.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.goodreads.com/book/show/36204293-the-war-on-normal-people" target="_blank"&gt;&lt;em&gt;The War on Normal People&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-304 pages. Started November 28th. Finished December 2nd.&lt;/p&gt;</description><guid>https://trevormanternach.com/2020/books-ive-read/</guid><pubDate>Wed, 01 Jan 2020 22:08:51 GMT</pubDate></item><item><title>2019 Books I've Read</title><link>https://trevormanternach.com/2019/books-ive-read/</link><dc:creator>Trevor Manternach</dc:creator><description>&lt;p&gt;&lt;a href="https://smile.amazon.com/Animal-Farm-Classics-George-Orwell-ebook/dp/B07JH73R6T/" target="_blank"&gt;&lt;em&gt;Animal Farm&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-140 pages. Started December 29th. Finished January 9th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Doing-Justice-Prosecutors-Thoughts-Punishment/dp/0525521127" target="_blank"&gt;&lt;em&gt;Doing Justice&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-368 pages. Started April 15th. Finished April 27th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Pound-Foolish-Exposing-Personal-Industry/dp/B00BI6JFJM/" target="_blank"&gt;&lt;em&gt;Pound Foolish&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-9 hours 7 minutes. Started May 2nd. Finished May 14th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/dp/B004DEPHGQ/" target="_blank"&gt;&lt;em&gt;Everything Is Obvious: *Once You Know the Answer&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-368 pages. Started May 15th. Finished May 31st.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/Absolutely-Remarkable-Thing-Novel-ebook/dp/B0796DR2XV/" target="_blank"&gt;&lt;em&gt;An Absolutely Remarkable Thing&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-352 pages. Started June 1st. Finished June 12th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/President-Missing-Novel-James-Patterson-ebook/dp/B072F3MYRH/" target="_blank"&gt;&lt;em&gt;The President is Missing&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-527 pages. Started June 16th. Finished June 24th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/Paper-Towns-John-Green/dp/0525478183/" target="_blank"&gt;&lt;em&gt;Paper Towns&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-305 pages. Started June 25th. Finished July 9th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Permanent-Record-Edward-Snowden/dp/1250237238/" target="_blank"&gt;&lt;em&gt;Permanent Record&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-352 pages. Started December 1st. Finished December 4th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/Feather-Thief-Obsession-Natural-History/dp/1101981636/" target="_blank"&gt;&lt;em&gt;The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-336 pages. Started November 27th. Finished December 13th.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://smile.amazon.com/1984-George-Orwell-ebook/dp/B0811YH6RT/" target="_blank"&gt;&lt;em&gt;1984&lt;/em&gt;&lt;/a&gt;&lt;br&gt;
-326 pages. Started December 16th. Finished January 9th.&lt;/p&gt;</description><guid>https://trevormanternach.com/2019/books-ive-read/</guid><pubDate>Tue, 01 Jan 2019 22:06:36 GMT</pubDate></item></channel></rss>
+304 pages. Started November 28th. Finished December 2nd.&lt;/p&gt;</description><guid>https://trevormanternach.com/2020/books-ive-read/</guid><pubDate>Wed, 01 Jan 2020 22:08:51 GMT</pubDate></item></channel></rss>
