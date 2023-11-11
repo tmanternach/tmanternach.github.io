@@ -14,6 +14,7 @@ I started using Nginx Proxy Manger at home recently and found a fast and easy wa
 
 ### Prerequisites
 
+
 - You need to be using [AdGuard Home](https://adguard.com/en/adguard-home/overview.html) for DNS
 - You want to quickly add new domains to [Nginx Proxy Manager](https://nginxproxymanager.com/)
 
