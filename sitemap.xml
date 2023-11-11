@@ -55,27 +55,27 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html</loc>
-  <lastmod>2023-11-11T00:01:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/06/04/my-ipod-history.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/08/18/the-earliest-photo.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/11/25/audiobooks.html</loc>
-  <lastmod>2023-07-24T23:26:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/</loc>
-  <lastmod>2023-08-05T03:37:00Z</lastmod>
+  <lastmod>2023-11-11T15:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/07/09/trying-out-nikola.html</loc>
-  <lastmod>2023-08-05T03:37:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/08/04/home-assistant-quick-bar/</loc>
@@ -86,12 +86,24 @@
   <lastmod>2023-08-18T02:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://trevormanternach.com/2023/10/10/routing-wireguard-networks-with-ospf-on-linux/</loc>
+  <lastmod>2023-11-11T15:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</loc>
+  <lastmod>2023-11-11T15:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2023/11/10/routing-wireguard-networks-with-ospf-on-linux/</loc>
+  <lastmod>2023-11-11T15:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://trevormanternach.com/about/</loc>
   <lastmod>2023-07-24T16:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/archive.html</loc>
-  <lastmod>2023-11-10T23:46:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/categories/</loc>
@@ -123,7 +135,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/index-1.html</loc>
-  <lastmod>2023-11-10T23:46:00Z</lastmod>
+  <lastmod>2023-11-11T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/listings/</loc>
