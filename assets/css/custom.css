@@ -4,6 +4,10 @@ footer {
   padding-bottom: 25px;
   text-align: center;
 }
+article .p-summary a {
+  text-decoration: underline;
+
+}
 a,a:visited,a:hover{
   color: #eb3f00;
 }
