@@ -19,6 +19,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/about/", "About"),
+        ("/blogroll/", "Blogroll"),
         ("/feed.xml", "RSS feed"),
     ),
 }
