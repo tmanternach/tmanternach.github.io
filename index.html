@@ -93,7 +93,13 @@
             <a href="2023/11/10/routing-wireguard-networks-with-ospf-on-linux/" rel="bookmark">
             <time class="published dt-published" datetime="2023-11-10T16:46:25-07:00" itemprop="datePublished" title="Nov 10, 2023 4:46 PM">Nov 10, 2023 4:46 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2023/11/10/routing-wireguard-networks-with-ospf-on-linux/#disqus_thread" data-disqus-identifier="cache/posts/2023/11/10/routing-wireguard-networks-with-ospf-on-linux.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I have a couple of Linux servers whose main purpose is to serve as a <a class="reference external" href="https://en.wikipedia.org/wiki/WireGuard">Wireguard</a> server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site's local network.</p>
 <p>Wireguard makes this easy to do, you just add the /24 network as an "AllowedIP" for that peer. Wireguard does the work of adding that route to the routing table on the Linux server itself. If this Wireguard server is part of a more complex network, though, you need to be sending these remote networks to your Wireguard server so everyone can access them, not just those using Wireguard. I have been forced to add static routes on my main router to point those networks to my Wireguard servers.</p>
@@ -141,7 +147,13 @@ router ospf
             <a href="2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/" rel="bookmark">
             <time class="published dt-published" datetime="2023-11-03T16:50:34-06:00" itemprop="datePublished" title="Nov 3, 2023 4:50 PM">Nov 3, 2023 4:50 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/#disqus_thread" data-disqus-identifier="cache/posts/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.</p>
 <p>To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like <cite>jq</cite> to filter it quickly.</p>
@@ -178,7 +190,13 @@ print(json.dumps(entries, indent=4))</pre>
             <a href="2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/" rel="bookmark">
             <time class="published dt-published" datetime="2023-08-17T19:35:22-06:00" itemprop="datePublished" title="Aug 17, 2023 7:35 PM">Aug 17, 2023 7:35 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/#disqus_thread" data-disqus-identifier="cache/posts/2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I know it's a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN "automatically". I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!</p>
 <p>This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).:</p>
@@ -226,7 +244,13 @@ end tell</pre>
             <a href="2023/08/04/home-assistant-quick-bar/" rel="bookmark">
             <time class="published dt-published" datetime="2023-08-04T17:00:00-06:00" itemprop="datePublished" title="Aug 4, 2023 5:00 PM">Aug 4, 2023 5:00 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2023/08/04/home-assistant-quick-bar/#disqus_thread" data-disqus-identifier="cache/posts/2023/08/04/home-assistant-quick-bar.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I discovered that <a class="reference external" href="https://www.home-assistant.io/">Home Assistant</a> has a not-so-recent feature called "<a class="reference external" href="https://www.home-assistant.io/docs/tools/quick-bar/">Quick Bar</a>" that I somehow missed when it was released in 2020. In short, it allows you to press the <cite>e</cite> (for entity search) or <cite>c</cite> (for command search) anywhere in the Home Assistant web interface to access a Spotlight-style search box. This allows you access settings and devices in Home Assistant with just a few keystrokes.</p>
                 </div>
@@ -239,7 +263,13 @@ end tell</pre>
             <a href="2023/07/09/trying-out-nikola.html" rel="bookmark">
             <time class="published dt-published" datetime="2023-07-09T20:11:29-06:00" itemprop="datePublished" title="Jul 9, 2023 8:11 PM">Jul 9, 2023 8:11 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2023/07/09/trying-out-nikola.html#disqus_thread" data-disqus-identifier="cache/posts/2023/07/09/trying-out-nikola.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I discovered a new static site generator today, <a class="reference external" href="https://getnikola.com/">Nikola</a>.</p>
                 </div>
@@ -252,7 +282,13 @@ end tell</pre>
             <a href="2022/11/25/audiobooks.html" rel="bookmark">
             <time class="published dt-published" datetime="2022-11-25T18:39:11-06:00" itemprop="datePublished" title="Nov 25, 2022 6:39 PM">Nov 25, 2022 6:39 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2022/11/25/audiobooks.html#disqus_thread" data-disqus-identifier="cache/posts/2022/11/25/audiobooks.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>It’s been years since I last paid for an Audible.com subscription. I just signed up this week ($5/month for 3 months) and it’s been a delight so far. I discovered that you can pretty easily remove the DRM on the audiobook .aax file. I am using <a href="https://audible-converter.ml/">Audible Tools</a> to help me create the ffmpeg command to do this.</p>
 <p>Another recent discovery is that <a href="https://overcast.fm/">Overcast</a>, my podcast player of choice, seems to natively support .m4b files (audiobook file format). It even includes artwork and chapters, so it behaves just like most of the podcasts I listen to.</p>
@@ -266,7 +302,13 @@ end tell</pre>
             <a href="2022/08/18/the-earliest-photo.html" rel="bookmark">
             <time class="published dt-published" datetime="2022-08-18T10:35:00-06:00" itemprop="datePublished" title="Aug 18, 2022 10:35 AM">Aug 18, 2022 10:35 AM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2022/08/18/the-earliest-photo.html#disqus_thread" data-disqus-identifier="cache/posts/2022/08/18/1997-photo-at-computer.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>The earliest photo I have of me at a computer. Circa 1997!</p>
 <img alt="/images/1997-Trevor.jpg" src="images/1997-Trevor.jpg">
@@ -280,7 +322,13 @@ end tell</pre>
             <a href="2022/06/04/my-ipod-history.html" rel="bookmark">
             <time class="published dt-published" datetime="2022-06-04T07:41:00-06:00" itemprop="datePublished" title="Jun 4, 2022 7:41 AM">Jun 4, 2022 7:41 AM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2022/06/04/my-ipod-history.html#disqus_thread" data-disqus-identifier="cache/posts/2022/06/04/my-ipod-history.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>Last month Apple <a href="https://www.apple.com/newsroom/2022/05/the-music-lives-on/">announced</a> the end of the iPod. I thought it might be fun to document my history with the product.</p>
 <p>--</p>
@@ -302,7 +350,13 @@ end tell</pre>
             <a href="2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html" rel="bookmark">
             <time class="published dt-published" datetime="2022-04-30T20:59:42-06:00" itemprop="datePublished" title="Apr 30, 2022 8:59 PM">Apr 30, 2022 8:59 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html#disqus_thread" data-disqus-identifier="cache/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p>I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.</p>
 <h4>Prerequisites</h4>
@@ -330,7 +384,13 @@ end tell</pre>
             <a href="2020/books-ive-read/" rel="bookmark">
             <time class="published dt-published" datetime="2020-01-01T16:08:51-06:00" itemprop="datePublished" title="Jan 1, 2020 4:08 PM">Jan 1, 2020 4:08 PM</time></a>
             </p>
-                </div>
+                        <p class="commentline">
+    
+    <a href="2020/books-ive-read/#disqus_thread" data-disqus-identifier="cache/posts/2020/2020-books-ive-read.html">Comments</a>
+
+
+                </p>
+</div>
             </header><div class="p-summary entry-summary">
                     <p><a href="https://www.goodreads.com/book/show/13538641-killing-kennedy" target="_blank"><em>Killing Kennedy: The End of Camelot</em></a><br>
 8 hours 25 minutes. Started January 11. Finished January 16th.</p>
@@ -353,7 +413,7 @@ end tell</pre>
         <ul class="pager postindexpager clearfix">
 <li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
         </ul>
-<!--End of body content--><footer id="footer">
+<script>var disqus_shortname="trevormanternach-com";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
             Contents © 2023         <a href="mailto:trevor@trevormanternach.com">Trevor Manternach</a> 
             
             
