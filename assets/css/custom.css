@@ -11,3 +11,7 @@ article .p-summary a {
 a,a:visited,a:hover{
   color: #eb3f00;
 }
+
+code {
+  color: #eb3f00;
+}

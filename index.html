@@ -17,7 +17,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="feed.xml">
 <link rel="canonical" href="https://trevormanternach.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2023/11/10/routing-wireguard-networks-with-ospf-on-linux/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -84,7 +84,36 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2023/11/10/routing-wireguard-networks-with-ospf-on-linux/" class="u-url">Routing Wireguard networks with OSPF on Linux</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" class="u-url">Using Bartender to only display Wireguard icon if connected to VPN</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Trevor Manternach
+                    </span></p>
+            <p class="dateline">
+            <a href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-01-12T19:13:44-07:00" itemprop="datePublished" title="Jan 12, 2024 7:13 PM">Jan 12, 2024 7:13 PM</time></a>
+            </p>
+                        <p class="commentline">
+    
+    <a href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/#disqus_thread" data-disqus-identifier="cache/posts/2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="p-summary entry-summary">
+                    <h4>Intro</h4>
+<p>I don't remember if I figured this out myself or found the suggestion elsewhere, but I just searched and couldn't find anything online so I decided to document this neat trick.</p>
+<p>I use <a href="https://www.macbartender.com/">Bartender</a> on all my Macs to clean up my Menu Bar. However I missed being able to glance up and look at the <a href="https://www.wireguard.com/">Wireguard</a> icon to tell if I was connected to a Wireguard VPN or not. Bartender has a "Triggers" feature that makes it possible to show certain menu bar icons based on the output of a shell script.</p>
+<h4>Setup</h4>
+<p>Open Bartender settings and visit the Triggers menu. Click Add Trigger. Name your Trigger and leave the "Activate a Preset" alone. Choose your Wireguard icon from the "Select menu bar items". Click Add Trigger Condition and choose Script. Paste the following script:</p>
+<p><code>scutil --nc list | grep -c -e "\(Connected\).*wireguard"</code></p>
+<p>This script uses the built-in <code>scutil</code> command to list all VPN connections configured on your Mac. It then uses <code>grep</code> to filter for only the Wireguard connections that have a status of Connected. The <code>-c</code> flag on <code>grep</code> counts the number of lines instead of outputting them. Bartender's Triggers expect a script result of <code>1</code>, <code>yes</code>, or <code>true</code> to activate the Trigger. As far as I know, Wireguard does not allow you to connect to more than one endpoint at a time, so this script should only ever output a <code>0</code> or <code>1</code>.</p>
+<p>I have mine set to run every 1 minute. This means that after you connect to a VPN with Wireguard, it could take the icon up to 1 minute to appear in your Menu Bar. Same thing after you disconnect.</p>
+<p>That's it! Click Done and your new Trigger is live and ready to use.</p>
+<h4>Troubleshooting</h4>
+<p>If this isn't working for you, my best suggestion would be to connect to a VPN with Wireguard and run the script above in your Terminal and verify that it is outputting <code>1</code>. </p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2023/11/10/routing-wireguard-networks-with-ospf-on-linux/" class="u-url">Routing Wireguard networks with OSPF on Linux</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Trevor Manternach
@@ -375,38 +404,6 @@ end tell</pre>
 <p>There really isn't anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!</p>
 <p>Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So <em>adguard.home</em> and <em>dns.home</em> can both get me to the same place. This helps when I can't remember the name of a service, or when you change software you can keep using something like <em>dashboard.home</em> for your <a href="https://github.com/bastienwirtz/homer">dashboard of choice</a>.</p>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020/books-ive-read/" class="u-url">2020 Books I've Read</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Trevor Manternach
-                    </span></p>
-            <p class="dateline">
-            <a href="2020/books-ive-read/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-01-01T16:08:51-06:00" itemprop="datePublished" title="Jan 1, 2020 4:08 PM">Jan 1, 2020 4:08 PM</time></a>
-            </p>
-                        <p class="commentline">
-    
-    <a href="2020/books-ive-read/#disqus_thread" data-disqus-identifier="cache/posts/2020/2020-books-ive-read.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="p-summary entry-summary">
-                    <p><a href="https://www.goodreads.com/book/show/13538641-killing-kennedy" target="_blank"><em>Killing Kennedy: The End of Camelot</em></a><br>
-8 hours 25 minutes. Started January 11. Finished January 16th.</p>
-<p><a href="https://www.goodreads.com/book/show/10587120-killing-lincoln" target="_blank"><em>Killing Lincoln</em></a><br>
-7 hours 49 minutes. Started June 7th. Finished June 15th.</p>
-<p><a href="https://www.goodreads.com/book/show/52836282-true-crimes-and-misdemeanors" target="_blank"><em>True Crimes and Misdemeanors: The Investigation of Donald Trump</em></a><br>
-496 pages. Started August 18th. Finished October 1st.</p>
-<p><a href="https://www.goodreads.com/book/show/54545843-where-law-ends" target="_blank"><em>Where Law Ends: Inside the Mueller Investigation</em></a><br>
-432 pages. Started October 1st. Finished October 27th.</p>
-<p><a href="https://www.goodreads.com/book/show/24583081-battle-for-the-big-sky" target="_blank"><em>Battle for the Big Sky</em></a><br>
-286 pages. Started October 28th. Finished November 25th.</p>
-<p><a href="https://www.goodreads.com/book/show/244909.The_Conscience_of_a_Conservative" target="_blank"><em>The Conscience of a Conservative</em></a><br>
-144 pages. Started November 26th. Finished November 28th.</p>
-<p><a href="https://www.goodreads.com/book/show/36204293-the-war-on-normal-people" target="_blank"><em>The War on Normal People</em></a><br>
-304 pages. Started November 28th. Finished December 2nd.</p>
-                </div>
             </article>
 </div>
     
@@ -414,7 +411,7 @@ end tell</pre>
 <li class="next"><a href="index-1.html" rel="next">Older posts</a></li>
         </ul>
 <script>var disqus_shortname="trevormanternach-com";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2023         <a href="mailto:trevor@trevormanternach.com">Trevor Manternach</a> 
+            Contents © 2024         <a href="mailto:trevor@trevormanternach.com">Trevor Manternach</a> 
             
             
         </footer>

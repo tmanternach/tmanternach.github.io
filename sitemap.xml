@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://trevormanternach.com/</loc>
-  <lastmod>2023-11-19T15:43:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2016/</loc>
@@ -55,19 +55,19 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/06/04/my-ipod-history.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/08/18/the-earliest-photo.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2022/11/25/audiobooks.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/</loc>
@@ -75,7 +75,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/07/09/trying-out-nikola.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/2023/08/04/home-assistant-quick-bar/</loc>
@@ -94,12 +94,20 @@
   <lastmod>2023-11-11T15:57:00Z</lastmod>
  </url>
  <url>
+  <loc>https://trevormanternach.com/2024/</loc>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://trevormanternach.com/2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/</loc>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://trevormanternach.com/about/</loc>
   <lastmod>2023-07-24T16:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/archive.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/blogroll/</loc>
@@ -135,7 +143,7 @@
  </url>
  <url>
   <loc>https://trevormanternach.com/index-1.html</loc>
-  <lastmod>2023-11-24T16:35:00Z</lastmod>
+  <lastmod>2024-01-13T02:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://trevormanternach.com/listings/</loc>
