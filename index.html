@@ -17,7 +17,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="feed.xml">
 <link rel="canonical" href="https://trevormanternach.com/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="2024/06/24/launch-ps-remote-play-with-controller-on-macos/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -84,7 +84,32 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" class="u-url">Using Bartender to only display Wireguard icon if connected to VPN</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2024/06/24/launch-ps-remote-play-with-controller-on-macos/" class="u-url">Launch PS Remote Play with Controller on macOS</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Trevor Manternach
+                    </span></p>
+            <p class="dateline">
+            <a href="2024/06/24/launch-ps-remote-play-with-controller-on-macos/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-06-24T06:52:43-06:00" itemprop="datePublished" title="Jun 24, 2024 6:52 AM">Jun 24, 2024 6:52 AM</time></a>
+            </p>
+                        <p class="commentline">
+    
+    <a href="2024/06/24/launch-ps-remote-play-with-controller-on-macos/#disqus_thread" data-disqus-identifier="cache/posts/2024/06/24/launch-ps-remote-play-with-controller-on-macos.html">Comments</a>
+
+
+                </p>
+</div>
+            </header><div class="p-summary entry-summary">
+                    <p>Here is a simple way to use the "PS" button on a Playstation controller to launch the PS Remote Play app on macOS. This requires <a href="http://www.keyboardmaestro.com/">Keyboard Maestro</a>.</p>
+<p>First you must disable the "Press Home button to open Launchpad" setting. This is on by default after you pair a controller to macOS. You can find it in System Settings -&gt; Game Controllers. Turn this off. Now when you press the PS button on your paired controller, nothing should happen.</p>
+<p><img alt="" src="images/ps-remote-play-controller-settings.png"></p>
+<p>Now you can build a simple Macro in Keyboard Maestro. Set the Trigger to "USB Device Key Trigger". Press the PS button, mine shows up as "DUALSHOCK 4 Wireless Controller Button 13".</p>
+<p>Now in the Actions for the Macro, choose "Activate a Specific Application" and find "PS Remote Play".
+<img alt="" src="images/ps-remote-play-keyboard-maestro.png"></p>
+<p>This same idea could be used to launch your favorite emulator application instead of Remote Play. I tried to find a way to trigger a Macro anytime it detected the controlled was connected via Bluetooth, but it seems like querying Bluetooth devices that way is too energy hungry and isn't allowed. This is the next best thing for me.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/" class="u-url">Using Bartender to only display Wireguard icon if connected to VPN</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Trevor Manternach
@@ -369,40 +394,6 @@ end tell</pre>
 <p>The iPod Touch was so much fun back then. The iPhone wasn't "in" Montana back then (no joke) and so the Touch was as close as I could get. I remember jailbreaking the thing, and even hanging out in IRC chatrooms trying to troubleshoot my jailbreak attempts. :-D</p>
 <p>This past winter I spent ~$100 on new parts to revive my old 4th gen iPod. It now has new life with <a href="https://www.ifixit.com/Store/iPod/iPod-4G-Photo-Battery/IF193-016?o=3">a fresh battery</a> and <a href="https://www.iflash.xyz/store/iflash-solo/">an SD card</a> in place of the 20GB spinning hard drive. It's hard to believe a piece of consumer technology from 17 years ago is still alive and well.</p>
 <p>I love iPod. It was one of my first adventures into a lifetime of technology.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html" class="u-url">AdGuard Wildcard DNS with Nginx Proxy Manager</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Trevor Manternach
-                    </span></p>
-            <p class="dateline">
-            <a href="2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html" rel="bookmark">
-            <time class="published dt-published" datetime="2022-04-30T20:59:42-06:00" itemprop="datePublished" title="Apr 30, 2022 8:59 PM">Apr 30, 2022 8:59 PM</time></a>
-            </p>
-                        <p class="commentline">
-    
-    <a href="2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html#disqus_thread" data-disqus-identifier="cache/posts/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager.html">Comments</a>
-
-
-                </p>
-</div>
-            </header><div class="p-summary entry-summary">
-                    <p>I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.</p>
-<h4>Prerequisites</h4>
-<ul>
-<li>You need to be using <a href="https://adguard.com/en/adguard-home/overview.html">AdGuard Home</a> for DNS</li>
-<li>You want to quickly add new domains to <a href="https://nginxproxymanager.com/">Nginx Proxy Manager</a>
-</li>
-</ul>
-<h4>AdGuard Home setup</h4>
-<p>In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.</p>
-<p><img alt="Screenshot of DNS rewrite options on AdGuard Home" src="images/adguard-1.png" title="Screenshot of DNS rewrite options on AdGuard Home"></p>
-<p>Click <strong>Add DNS rewrite</strong> and enter something like <em>*.home</em> in the domain name field.</p>
-<p>Enter the IP address of your NPM host and click <strong>Save</strong>.</p>
-<h4>Nginx Proxy Manager</h4>
-<p><img alt="Screenshot of Nginx Proxy Manager" src="images/nginx-1.png" title="Screenshot of Nginx Proxy Manager"></p>
-<p>There really isn't anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!</p>
-<p>Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So <em>adguard.home</em> and <em>dns.home</em> can both get me to the same place. This helps when I can't remember the name of a service, or when you change software you can keep using something like <em>dashboard.home</em> for your <a href="https://github.com/bastienwirtz/homer">dashboard of choice</a>.</p>
                 </div>
             </article>
 </div>
