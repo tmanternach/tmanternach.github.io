@@ -1,4 +1,10 @@
+:root {
+  color-scheme: light dark;
+}
+
 body {
+  background-color: light-dark(white, black);
+  color: light-dark(black, rgb(153, 153, 153));
 }
 footer {
   padding-bottom: 25px;
@@ -14,4 +20,11 @@ a,a:visited,a:hover{
 
 code {
   color: #eb3f00;
+}
+
+.nav-item a {
+  text-decoration: underline;
+}
+#blog-title {
+  color: light-dark(#343a40, rgb(153, 153, 153));
 }
