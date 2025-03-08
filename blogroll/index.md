@@ -11,6 +11,8 @@
 
 This is a semi-automated export of my subscribed RSS feeds from my [FreshRSS](https://www.freshrss.org/) account.
 
+You can find my python script that helps create this page [here](https://github.com/tmanternach/tmanternach.github.io/blob/src/blogroll-convert.py).
+
 ## Apple
 
 - [MacStories](https://www.macstories.net/) ([feed](https://www.macstories.net/feed/))
