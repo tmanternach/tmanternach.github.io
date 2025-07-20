@@ -8,7 +8,7 @@ BLOG_TITLE = "Trevor Manternach"
 SITE_URL = "https://trevormanternach.com/"
 BLOG_EMAIL = "trevor@trevormanternach.com"
 BLOG_DESCRIPTION = "This is my personal weblog."
-
+SITE_HAS_COMMENTS = True
 DEFAULT_LANG = "en"
 TRANSLATIONS = {
     DEFAULT_LANG: "",
@@ -148,8 +148,8 @@ RSS_COPYRIGHT = 'Contents © {date} <a href="mailto:{email}">{author}</a> {licen
 RSS_COPYRIGHT_PLAIN = 'Contents © {date} {author} {license}'
 RSS_COPYRIGHT_FORMATS = CONTENT_FOOTER_FORMATS
 
-COMMENT_SYSTEM = "DISQUS"
-COMMENT_SYSTEM_ID = "trevormanternach-com"
+#COMMENT_SYSTEM = "DISQUS"
+#COMMENT_SYSTEM_ID = "trevormanternach-com"
 
 STRIP_INDEXES = True
 
