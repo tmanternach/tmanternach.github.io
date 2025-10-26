@@ -11,7 +11,9 @@
 
 This is a semi-automated export of my subscribed RSS feeds from my [FreshRSS](https://www.freshrss.org/) account.
 
-You can find my python script that helps create this page [here](https://github.com/tmanternach/tmanternach.github.io/blob/src/blogroll-convert.py).
+You can find my python script that helps create this page [here](https://github.com/tmanternach/tmanternach.github.io/blob/src/blogroll-convert.py). 
+
+*Last updated October 26th, 2025*
 
 ## Apple
 
