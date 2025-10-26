@@ -148,7 +148,7 @@ RSS_COPYRIGHT = 'Contents © {date} <a href="mailto:{email}">{author}</a> {licen
 RSS_COPYRIGHT_PLAIN = 'Contents © {date} {author} {license}'
 RSS_COPYRIGHT_FORMATS = CONTENT_FOOTER_FORMATS
 
-#COMMENT_SYSTEM = "DISQUS"
+COMMENT_SYSTEM = ""
 #COMMENT_SYSTEM_ID = "trevormanternach-com"
 
 STRIP_INDEXES = True
