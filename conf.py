@@ -20,7 +20,7 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archive"),
         ("/about/", "About"),
         ("/blogroll/", "Blogroll"),
-        ("/feed.xml", "RSS feed"),
+        ("/feed.xml", "RSS"),
     ),
 }
 
@@ -28,7 +28,8 @@ NAVIGATION_ALT_LINKS = {
     DEFAULT_LANG: ()
 }
 
-THEME="trevor-bootblog4"
+THEME="trevor-kiss"
+USE_BUNDLES = True
 THEME_COLOR = '#d63900'
 
 THEME_CONFIG = {
