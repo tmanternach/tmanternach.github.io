@@ -1,0 +1,37 @@
+baseURL = 'https://trevormanternach.com/'
+languageCode = 'en-us'
+title = 'Trevor Manternach'
+theme = ["kiss"]
+pagination.pagerSize = 8
+enableRobotsTXT = true
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+[params]
+  showFullTextInRss = true
+  [sections_right]
+  
+[permalinks]
+  [permalinks.page]
+    posts = '/:year/:month/:day/:slug/'
+    pages = ':slug/'
+
+[params.sections_right]
+  "/about" = "About"
+  "/blogroll" = "Blogroll"
+  "feed.xml" = "RSS"
+[params.author]
+  email = "trevor@trevormanternach.com"
+  name = "Trevor Manternach"
+[params.info]
+  adsense = "" # Adsense ID (ID only, without ca-pub-)
+  enableSocial = true # Adds OpenGraph and Twitter cards
+  homeTitle = "" # Title for home page
+  poweredby = false # Adds powered by hugo and kiss below Copyright
+  related = true # Includes related articles at the bottom of the article
+  codeCopy = true # Add copy button above code blocks
+  taxonomiesCount = true # Add taxonomies count
+[outputFormats]
+  [outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"

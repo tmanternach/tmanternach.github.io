@@ -1,0 +1,45 @@
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="{{ .Site.BaseURL }}">
+          <h1 id="nav-heading" class="title is-4">{{ .Site.Title }}</h1>
+        </a>
+      </div>
+      {{ if (isset .Site.Params "sections_right" ) }}
+      <div class="nav-right">
+        {{- range $section, $printable := .Site.Params.sections_right -}}
+        {{- if $printable -}}
+        <a class="nav-item" href="{{$section}}">
+          <h2 class="title is-5">{{$printable}}</h2>
+        </a>
+        {{- end -}}
+        {{- end -}}
+        <div class="searchform nav-item" role="search">                   
+          <!-- DuckDuckGo custom search -->
+          <form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+          <input type="hidden" name="sites" value="https://trevormanternach.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" size="10" placeholder="Search..." class="span2">
+          </form>
+          <!-- End of custom search -->
+        </div>
+      </div>
+      {{ end }}
+    </nav>
+
+    <nav class="nav">
+      {{ if (isset .Site.Params "sections_left" ) }}
+      <div class="nav-left">
+        {{- range $section, $printable := .Site.Params.sections_left -}}
+        {{- if $printable -}}
+        <a class="nav-item" href="{{$section}}">
+          <h2 class="title is-5">{{$printable}}</h2>
+        </a>
+        {{- end -}}
+        {{- end -}}
+      </div>
+      {{ end }}
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>

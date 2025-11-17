@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:source="https://source.scripting.com/">
+  <channel>
+    <title>Tutorial on Trevor Manternach</title>
+    <link>http://localhost:1313/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Trevor Manternach</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Apr 2022 20:59:42 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdGuard Wildcard DNS with Nginx Proxy Manager</title>
+      <link>http://localhost:1313/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</link>
+      <pubDate>Sat, 30 Apr 2022 20:59:42 -0600</pubDate>
+      <guid>http://localhost:1313/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</guid>
+      <description>&lt;p&gt;I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;You need to be using &lt;a href=&#34;https://adguard.com/en/adguard-home/overview.html&#34;&gt;AdGuard Home&lt;/a&gt; for DNS&lt;/li&gt;
+&lt;li&gt;You want to quickly add new domains to &lt;a href=&#34;https://nginxproxymanager.com/&#34;&gt;Nginx Proxy Manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;adguard-home-setup&#34;&gt;AdGuard Home setup&lt;/h3&gt;
+&lt;p&gt;In the AdGuard Home web interface, go to Filters-&amp;gt;DNS rewrites.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/adguard-1.png&#34; alt=&#34;Screenshot of DNS rewrite options on AdGuard Home&#34; title=&#34;Screenshot of DNS rewrite options on AdGuard Home&#34;&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>You need to be using <a href="https://adguard.com/en/adguard-home/overview.html">AdGuard Home</a> for DNS</li>
+<li>You want to quickly add new domains to <a href="https://nginxproxymanager.com/">Nginx Proxy Manager</a></li>
+</ul>
+<h3 id="adguard-home-setup">AdGuard Home setup</h3>
+<p>In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.</p>
+<p><img src="/images/adguard-1.png" alt="Screenshot of DNS rewrite options on AdGuard Home" title="Screenshot of DNS rewrite options on AdGuard Home"></p>
+<p>Click <strong>Add DNS rewrite</strong> and enter something like <em>*.home</em> in the domain name field.</p>
+<p>Enter the IP address of your NPM host and click <strong>Save</strong>.</p>
+<h3 id="nginx-proxy-manager">Nginx Proxy Manager</h3>
+<p><img src="/images/nginx-1.png" alt="Screenshot of Nginx Proxy Manager" title="Screenshot of Nginx Proxy Manager"></p>
+<p>There really isn&rsquo;t anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!</p>
+<p>Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So <em>adguard.home</em> and <em>dns.home</em> can both get me to the same place. This helps when I can&rsquo;t remember the name of a service, or when you change software you can keep using something like <em>dashboard.home</em> for your <a href="https://github.com/bastienwirtz/homer">dashboard of choice</a>.</p>
+]]></content:encoded>
+      <source:markdown>
+I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.
+
+### Prerequisites
+
+- You need to be using [AdGuard Home](https://adguard.com/en/adguard-home/overview.html) for DNS
+- You want to quickly add new domains to [Nginx Proxy Manager](https://nginxproxymanager.com/)
+
+### AdGuard Home setup
+
+In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.
+
+![Screenshot of DNS rewrite options on AdGuard Home](/images/adguard-1.png &#34;Screenshot of DNS rewrite options on AdGuard Home&#34;)
+
+Click **Add DNS rewrite** and enter something like *\*.home* in the domain name field.
+
+Enter the IP address of your NPM host and click **Save**.
+
+### Nginx Proxy Manager
+
+![Screenshot of Nginx Proxy Manager](/images/nginx-1.png &#34;Screenshot of Nginx Proxy Manager&#34;)
+
+There really isn&#39;t anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!
+
+Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So *adguard.home* and *dns.home* can both get me to the same place. This helps when I can&#39;t remember the name of a service, or when you change software you can keep using something like *dashboard.home* for your [dashboard of choice](https://github.com/bastienwirtz/homer).
+
+
+</source:markdown>
+    </item>
+  </channel>
+</rss>

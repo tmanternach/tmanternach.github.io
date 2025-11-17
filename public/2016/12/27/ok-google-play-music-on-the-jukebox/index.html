@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ok Google: Play Music on the Jukebox | Trevor Manternach</title>
+
+<meta property='og:title' content='Ok Google: Play Music on the Jukebox - Trevor Manternach'>
+<meta property='og:description' content='Follow along as I retro-fit my old jukebox to stream music from the internet.'>
+<meta property='og:url' content='http://localhost:1313/2016/12/27/ok-google-play-music-on-the-jukebox/'>
+<meta property='og:site_name' content='Trevor Manternach'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2016-12-27T16:15:05-07:00'><meta property='article:modified_time' content='2016-12-27T16:15:05-07:00'><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@'><meta name='twitter:creator' content='@'>
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://localhost:1313/2016/12/27/ok-google-play-music-on-the-jukebox/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://localhost:1313/">
+          <h1 id="nav-heading" class="title is-4">Trevor Manternach</h1>
+        </a>
+      </div>
+      
+      <div class="nav-right"><a class="nav-item" href="/about">
+          <h2 class="title is-5">About</h2>
+        </a><a class="nav-item" href="/blogroll">
+          <h2 class="title is-5">Blogroll</h2>
+        </a><a class="nav-item" href="feed.xml">
+          <h2 class="title is-5">RSS</h2>
+        </a><div class="searchform nav-item" role="search">                   
+          
+          <form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+          <input type="hidden" name="sites" value="https://trevormanternach.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" size="10" placeholder="Search..." class="span2">
+          </form>
+          
+        </div>
+      </div>
+      
+    </nav>
+
+    <nav class="nav">
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    
+    <h2 class="subtitle is-6">December 27, 2016</h2>
+    
+    <h1 class="title">Ok Google: Play Music on the Jukebox</h1>
+    
+    <div class="content">
+      <h2 id="intro">Intro</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/jukebox.jpg" alt="Jukebox"></p>
+<p>I recently picked up an AMI R-89 jukebox. It is a combo unit, plays both 45 rpm records and CDs. It looked to be in full working order, was full of music, and only $400. I have always wanted a jukebox, but I also wanted to be able to easily play any music through it. I’ve found a way, and it feels like the future!</p>
+<h2 id="cd-player">CD Player</h2>
+<p>In order to play CDs, the jukebox comes with a Philips 6-disc CD player. It has RCA audio outputs, and also has a few control wires so the jukebox controller board can tell the player which track to play. My first attempt to play my own music was just to put my own CDs in the player, but (I think) because the CD player had not been used for a long time, it was constantly skipping and freezing up.</p>
+<h2 id="headphone-to-rca">Headphone to RCA</h2>
+<p>I unplugged the RCA outputs from the CD player, and hooked up a 3.5MM headphone to RCA cable. This let me then plug my iPhone in and try to play music through it. It worked, with one major caveat: the amplifier is muted unless it is told by the jukebox that 1) a record is playing or 2) a CD is playing. Because neither of those things were happening, no sound comes through the speakers. This is easy to get around, temporarily, by just telling the jukebox to play a CD track. This only works until that song is over, then the amplifier mutes again.</p>
+<h2 id="wiring-diagrams-and-cutting-the-orange-wire">Wiring Diagrams and Cutting the Orange Wire</h2>
+<p>By complete luck, the jukebox came with a 3-ring binder full of manuals. Inside one of the books is a step-by-step breakdown of what happens inside the jukebox when a selection is made. Following this, I found that the amplifier is constantly being sent a mute signal on one wire. When a song is playing, there is no signal sent through that wire. That then tells the amplifier to un-mute so we can hear the song. This seemed almost backwards to me, but it’s actually perfect. All I needed to do was cut that mute wire, and the amplifier is then always un-muted. This isn’t perfect, there is a slight hum when nothing is playing, but I can live with that.</p>
+<h2 id="worked-great-for-20-minutes">Worked Great for 20 Minutes</h2>
+<p>The above setup was awesome, until 20 minutes in when the jukebox would automatically choose a record to play. It has an “Autoplay” setting, and after 20 minutes of inactivity (because the jukebox has no idea that the iPhone is playing music) it will choose a song at random. Fortunately, again using the manuals, I found a Programming Guide that allowed me to completely disable the Autoplay feature.</p>
+<h2 id="chromecast-audio">Chromecast Audio</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/chromecast-audio.jpg" alt="Chromecast Audio"></p>
+<p>The iPhone worked well, but any time a text message or phone call would come in, the music would pause. It also just looked ugly, either the jukebox needed to be open or the iPhone shoved inside to work. I decided to pick up a Google Chromecast Audio. We have a couple of regular Chromecasts in the house, but didn’t have any of the audio-only versions. It plugs into power inside the jukebox, where the CD player used to go. This means that the jukebox still only has 1 power cord coming out of it. The Chromecast Audio uses WiFi, so it was extremely easy to set up. I named it “Jukebox” and could then stream Spotify from my iPhone to it. This was much easier than needing to leave my phone inside the jukebox.</p>
+<h2 id="ok-google">&ldquo;Ok, Google&rdquo;</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/google-home.jpg" alt="Google home"></p>
+<p>I received a Google Home for Christmas, and it tied this project up into the perfect bow. Because the Home has built-in Google Cast support, I can simply say “Ok, Google, play music on the jukebox” and a few seconds later the jukebox starts playing music. The cool part about the Google Cast/Home ecosystem is that
+they don’t lock you into their music provider. I was able to connect my Home to my Spotify Premium account, and the Home then knows to use it for music. You don’t have to say “Play music from Spotify”, just “Play music”. It feels very natural. The other benefit is that you can do all of this from your phone or computer, Spotify has great Google Cast support. The Google Home “hands-free” part is just icing on the cake!</p>
+<h2 id="next-step-maybe">Next Step, Maybe</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/smartthings.jpg" alt="Samsung Smartthings"></p>
+<p>Time will tell how much I actually use this, but the next step might be to look into plugging the jukebox into one of these new “smart” power plugs. Google Home supports the SmartThings Hub from Samsung, and then I would be able to turn on the jukebox, wait a few seconds for the Chromecast to boot up, and then have it play music, all hands-free. But for now, this current setup is perfect for me.</p>
+<h2 id="outro">Outro</h2>
+<p>This was such a fun (and easy) project. Like I said, I have wanted a jukebox for a long time, and I love that this still looks and works like a normal jukebox (45s still play just fine!) while being able to instantly stream almost any song to it.</p>
+<!-- raw HTML omitted -->
+
+      
+      <div class="related">
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+  </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+

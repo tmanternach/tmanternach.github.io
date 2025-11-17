@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:source="https://source.scripting.com/">
+  <channel>
+    <title>Trevor Manternach</title>
+    <link>http://localhost:1313/</link>
+    <description>Personal blog of Trevor Manternach</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>trevor@trevormanternach.com (Trevor Manternach)</managingEditor>
+    <webMaster>trevor@trevormanternach.com (Trevor Manternach)</webMaster>
+    <lastBuildDate>Sun, 20 Jul 2025 06:25:01 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shake and Fold</title>
+      <link>http://localhost:1313/2025/07/20/shake-and-fold/</link>
+      <pubDate>Sun, 20 Jul 2025 06:25:01 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2025/07/20/shake-and-fold/</guid>
+      <description>&lt;p&gt;My &lt;a href=&#34;https://bookmarks.trevormanternach.com/bookmarks/shared&#34;&gt;bookmarking service&lt;/a&gt; tells me that I saved &lt;a href=&#34;https://www.ted.com/talks/joe_smith_how_to_use_a_paper_towel&#34;&gt;this video&lt;/a&gt; in April 2016. I&amp;rsquo;m not joking one bit when I tell you that I have thought of this video every single time I have washed my hands in a bathroom with paper towels. Give it a watch, it&amp;rsquo;s a quick 4 minutes.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;You will, for the rest of your life, remember those words every time you pick up a paper towel.&amp;rdquo;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>My <a href="https://bookmarks.trevormanternach.com/bookmarks/shared">bookmarking service</a> tells me that I saved <a href="https://www.ted.com/talks/joe_smith_how_to_use_a_paper_towel">this video</a> in April 2016. I&rsquo;m not joking one bit when I tell you that I have thought of this video every single time I have washed my hands in a bathroom with paper towels. Give it a watch, it&rsquo;s a quick 4 minutes.</p>
+<p>&ldquo;You will, for the rest of your life, remember those words every time you pick up a paper towel.&rdquo;</p>
+]]></content:encoded>
+      <source:markdown>
+My [bookmarking service](https://bookmarks.trevormanternach.com/bookmarks/shared) tells me that I saved [this video](https://www.ted.com/talks/joe_smith_how_to_use_a_paper_towel) in April 2016. I&#39;m not joking one bit when I tell you that I have thought of this video every single time I have washed my hands in a bathroom with paper towels. Give it a watch, it&#39;s a quick 4 minutes.
+
+&#34;You will, for the rest of your life, remember those words every time you pick up a paper towel.&#34;
+</source:markdown>
+    </item>
+    <item>
+      <title>How to pause an Apple Swim Workout</title>
+      <link>http://localhost:1313/2025/06/17/how-to-pause-an-apple-swim-workout/</link>
+      <pubDate>Tue, 17 Jun 2025 20:26:26 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2025/06/17/how-to-pause-an-apple-swim-workout/</guid>
+      <description>&lt;p&gt;I lap swam a handful of times last summer at our local outdoor pool, and my goal is to get there at least 3 days a week this year. This is mostly a note for my future self:&lt;/p&gt;
+&lt;p&gt;To pause a Swim Workout, &lt;a href=&#34;https://support.apple.com/guide/watch/go-for-a-swim-apd09135915f/watchos&#34;&gt;Apple says&lt;/a&gt; &amp;ldquo;press the Digital Crown and side button at the same time&amp;rdquo;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I lap swam a handful of times last summer at our local outdoor pool, and my goal is to get there at least 3 days a week this year. This is mostly a note for my future self:</p>
+<p>To pause a Swim Workout, <a href="https://support.apple.com/guide/watch/go-for-a-swim-apd09135915f/watchos">Apple says</a> &ldquo;press the Digital Crown and side button at the same time&rdquo;.</p>
+]]></content:encoded>
+      <source:markdown>
+I lap swam a handful of times last summer at our local outdoor pool, and my goal is to get there at least 3 days a week this year. This is mostly a note for my future self:
+
+To pause a Swim Workout, [Apple says](https://support.apple.com/guide/watch/go-for-a-swim-apd09135915f/watchos) &#34;press the Digital Crown and side button at the same time&#34;.
+</source:markdown>
+    </item>
+    <item>
+      <title>Launch PS Remote Play with Controller on macOS</title>
+      <link>http://localhost:1313/2024/06/24/launch-ps-remote-play-with-controller-on-macos/</link>
+      <pubDate>Mon, 24 Jun 2024 06:52:43 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2024/06/24/launch-ps-remote-play-with-controller-on-macos/</guid>
+      <description>&lt;p&gt;Here is a simple way to use the &amp;ldquo;PS&amp;rdquo; button on a Playstation controller to launch the PS Remote Play app on macOS. This requires &lt;a href=&#34;http://www.keyboardmaestro.com/&#34;&gt;Keyboard Maestro&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First you must disable the &amp;ldquo;Press Home button to open Launchpad&amp;rdquo; setting. This is on by default after you pair a controller to macOS. You can find it in System Settings -&amp;gt; Game Controllers. Turn this off. Now when you press the PS button on your paired controller, nothing should happen.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Here is a simple way to use the &ldquo;PS&rdquo; button on a Playstation controller to launch the PS Remote Play app on macOS. This requires <a href="http://www.keyboardmaestro.com/">Keyboard Maestro</a>.</p>
+<p>First you must disable the &ldquo;Press Home button to open Launchpad&rdquo; setting. This is on by default after you pair a controller to macOS. You can find it in System Settings -&gt; Game Controllers. Turn this off. Now when you press the PS button on your paired controller, nothing should happen.</p>
+<p><img src="/images/ps-remote-play-controller-settings.png" alt=""></p>
+<p>Now you can build a simple Macro in Keyboard Maestro. Set the Trigger to &ldquo;USB Device Key Trigger&rdquo;. Press the PS button, mine shows up as &ldquo;DUALSHOCK 4 Wireless Controller Button 13&rdquo;.</p>
+<p>Now in the Actions for the Macro, choose &ldquo;Activate a Specific Application&rdquo; and find &ldquo;PS Remote Play&rdquo;.
+<img src="/images/ps-remote-play-keyboard-maestro.png" alt=""></p>
+<p>This same idea could be used to launch your favorite emulator application instead of Remote Play. I tried to find a way to trigger a Macro anytime it detected the controlled was connected via Bluetooth, but it seems like querying Bluetooth devices that way is too energy hungry and isn&rsquo;t allowed. This is the next best thing for me.</p>
+]]></content:encoded>
+      <source:markdown>
+Here is a simple way to use the &#34;PS&#34; button on a Playstation controller to launch the PS Remote Play app on macOS. This requires [Keyboard Maestro](http://www.keyboardmaestro.com/).
+
+First you must disable the &#34;Press Home button to open Launchpad&#34; setting. This is on by default after you pair a controller to macOS. You can find it in System Settings -&gt; Game Controllers. Turn this off. Now when you press the PS button on your paired controller, nothing should happen.
+
+![](/images/ps-remote-play-controller-settings.png)
+
+Now you can build a simple Macro in Keyboard Maestro. Set the Trigger to &#34;USB Device Key Trigger&#34;. Press the PS button, mine shows up as &#34;DUALSHOCK 4 Wireless Controller Button 13&#34;.
+
+Now in the Actions for the Macro, choose &#34;Activate a Specific Application&#34; and find &#34;PS Remote Play&#34;.
+![](/images/ps-remote-play-keyboard-maestro.png)
+
+This same idea could be used to launch your favorite emulator application instead of Remote Play. I tried to find a way to trigger a Macro anytime it detected the controlled was connected via Bluetooth, but it seems like querying Bluetooth devices that way is too energy hungry and isn&#39;t allowed. This is the next best thing for me.
+
+
+</source:markdown>
+    </item>
+    <item>
+      <title>Using Bartender to only display Wireguard icon if connected to VPN</title>
+      <link>http://localhost:1313/2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/</link>
+      <pubDate>Fri, 12 Jan 2024 19:13:44 -0700</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2024/01/12/using-bartender-to-only-display-wireguard-icon-if-connected-to-vpn/</guid>
+      <description>&lt;h3 id=&#34;intro&#34;&gt;Intro&lt;/h3&gt;
+&lt;p&gt;I don&amp;rsquo;t remember if I figured this out myself or found the suggestion elsewhere, but I just searched and couldn&amp;rsquo;t find anything online so I decided to document this neat trick.&lt;/p&gt;
+&lt;p&gt;I use &lt;a href=&#34;https://www.macbartender.com/&#34;&gt;Bartender&lt;/a&gt; on all my Macs to clean up my Menu Bar. However I missed being able to glance up and look at the &lt;a href=&#34;https://www.wireguard.com/&#34;&gt;Wireguard&lt;/a&gt; icon to tell if I was connected to a Wireguard VPN or not. Bartender has a &amp;ldquo;Triggers&amp;rdquo; feature that makes it possible to show certain menu bar icons based on the output of a shell script.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h3 id="intro">Intro</h3>
+<p>I don&rsquo;t remember if I figured this out myself or found the suggestion elsewhere, but I just searched and couldn&rsquo;t find anything online so I decided to document this neat trick.</p>
+<p>I use <a href="https://www.macbartender.com/">Bartender</a> on all my Macs to clean up my Menu Bar. However I missed being able to glance up and look at the <a href="https://www.wireguard.com/">Wireguard</a> icon to tell if I was connected to a Wireguard VPN or not. Bartender has a &ldquo;Triggers&rdquo; feature that makes it possible to show certain menu bar icons based on the output of a shell script.</p>
+<h3 id="setup">Setup</h3>
+<p>Open Bartender settings and visit the Triggers menu. Click Add Trigger. Name your Trigger and leave the &ldquo;Activate a Preset&rdquo; alone. Choose your Wireguard icon from the &ldquo;Select menu bar items&rdquo;. Click Add Trigger Condition and choose Script. Paste the following script:</p>
+<p><code>scutil --nc list | grep -c -e &quot;\(Connected\).*wireguard&quot;</code></p>
+<p>This script uses the built-in <code>scutil</code> command to list all VPN connections configured on your Mac. It then uses <code>grep</code> to filter for only the Wireguard connections that have a status of Connected. The <code>-c</code> flag on <code>grep</code> counts the number of lines instead of outputting them. Bartender&rsquo;s Triggers expect a script result of <code>1</code>, <code>yes</code>, or <code>true</code> to activate the Trigger. As far as I know, Wireguard does not allow you to connect to more than one endpoint at a time, so this script should only ever output a <code>0</code> or <code>1</code>.</p>
+<p>I have mine set to run every 1 minute. This means that after you connect to a VPN with Wireguard, it could take the icon up to 1 minute to appear in your Menu Bar. Same thing after you disconnect.</p>
+<p>That&rsquo;s it! Click Done and your new Trigger is live and ready to use.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>If this isn&rsquo;t working for you, my best suggestion would be to connect to a VPN with Wireguard and run the script above in your Terminal and verify that it is outputting <code>1</code>.</p>
+]]></content:encoded>
+      <source:markdown>
+### Intro
+
+I don&#39;t remember if I figured this out myself or found the suggestion elsewhere, but I just searched and couldn&#39;t find anything online so I decided to document this neat trick.
+
+I use [Bartender](https://www.macbartender.com/) on all my Macs to clean up my Menu Bar. However I missed being able to glance up and look at the [Wireguard](https://www.wireguard.com/) icon to tell if I was connected to a Wireguard VPN or not. Bartender has a &#34;Triggers&#34; feature that makes it possible to show certain menu bar icons based on the output of a shell script.
+
+### Setup
+Open Bartender settings and visit the Triggers menu. Click Add Trigger. Name your Trigger and leave the &#34;Activate a Preset&#34; alone. Choose your Wireguard icon from the &#34;Select menu bar items&#34;. Click Add Trigger Condition and choose Script. Paste the following script:
+
+```scutil --nc list | grep -c -e &#34;\(Connected\).*wireguard&#34;```
+
+This script uses the built-in `scutil` command to list all VPN connections configured on your Mac. It then uses `grep` to filter for only the Wireguard connections that have a status of Connected. The `-c` flag on `grep` counts the number of lines instead of outputting them. Bartender&#39;s Triggers expect a script result of `1`, `yes`, or `true` to activate the Trigger. As far as I know, Wireguard does not allow you to connect to more than one endpoint at a time, so this script should only ever output a `0` or `1`.
+
+I have mine set to run every 1 minute. This means that after you connect to a VPN with Wireguard, it could take the icon up to 1 minute to appear in your Menu Bar. Same thing after you disconnect.
+
+That&#39;s it! Click Done and your new Trigger is live and ready to use.
+
+### Troubleshooting
+
+If this isn&#39;t working for you, my best suggestion would be to connect to a VPN with Wireguard and run the script above in your Terminal and verify that it is outputting `1`. </source:markdown>
+    </item>
+    <item>
+      <title>Routing Wireguard networks with OSPF on Linux</title>
+      <link>http://localhost:1313/2023/11/10/routing-wireguard-networks-with-ospf-on-linux/</link>
+      <pubDate>Fri, 10 Nov 2023 16:46:25 -0700</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/11/10/routing-wireguard-networks-with-ospf-on-linux/</guid>
+      <description>&lt;p&gt;I have a couple of Linux servers whose main purpose is to serve as a &lt;a href=&#34;https://en.wikipedia.org/wiki/WireGuard&#34;&gt;Wireguard&lt;/a&gt; server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site&amp;rsquo;s local network.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I have a couple of Linux servers whose main purpose is to serve as a <a href="https://en.wikipedia.org/wiki/WireGuard">Wireguard</a> server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site&rsquo;s local network.</p>
+<p>Wireguard makes this easy to do, you just add the /24 network as an &ldquo;AllowedIP&rdquo; for that peer. Wireguard does the work of adding that route to the routing table on the Linux server itself. If this Wireguard server is part of a more complex network, though, you need to be sending these remote networks to your Wireguard server so everyone can access them, not just those using Wireguard. I have been forced to add static routes on my main router to point those networks to my Wireguard servers.</p>
+<p>Enter OSPF! If you are reading this, I am going to assume you know what OSPF is and why it&rsquo;s preferred over static routing. What follows is the steps I took to get my Wireguard &ldquo;AllowedIPs&rdquo; network automatically advertised to my main router using OSPF.</p>
+<h2 id="install-frr">Install FRR</h2>
+<p><a href="https://en.wikipedia.org/wiki/FRRouting">FRR</a> is a Linux package that implements a lot of networking routing protocols. On your server running Wireguard (I&rsquo;m assuming Debian/Ubuntu), running  <code>apt get install -y frr</code>  gets everything you need installed. This includes a <code>vtysh</code> command that dumps you into a Cisco IOS-like terminal to configure your OSPF routing.</p>
+<h2 id="enable-ospf-daemon">Enable OSPF daemon</h2>
+<p>Before configuring OSPF, you must enable the ospfd daemon in the FRR config. Edit <code>/etc/frr/daemons</code> and change the <code>ospfd=no</code> line to read <code>ospfd=yes</code>. Then <code>systemctl restart frr</code> is needed to restart FRR with OSPF enabled.</p>
+<h2 id="configure-ospf-inside-frr">Configure OSPF inside FRR</h2>
+<p>Run <code>vtysh</code> to enter the FRR VTY interface. <code>config terminal</code> to enter configuration mode. Here is the simplest configuration required to enable OSPF:</p>
+<pre tabindex="0"><code>interface ens160
+	  ip ospf network point-to-point
+!
+router ospf
+	  ospf router-id 192.168.0.0
+	  redistribute kernel
+	  redistribute connected
+	  network 192.168.0.0/31 area 0
+</code></pre><p>Here is the same config with my comments explaining the important parts:</p>
+<pre tabindex="0"><code>interface ens160 # this is your linux interface that is facing your main router.
+  ip ospf network point-to-point # I am using a point-to-point style OSPF network, yours might be a broadcast type.
+!
+router ospf
+  ospf router-id 192.168.0.0 # this could be anything, but traditionally this is your LAN IP of this wireguard server
+  redistribute kernel # this was the tricky part. This is required to insert the Wireguard &#34;AllowedIPs&#34; networks into OSPF
+  redistribute connected # this is required to insert your wg0 (and other) networks in OSPF
+  network 192.168.0.0/31 area 0 # this is your LAN network for this wireguard server. Whatever is assigned to ens160 in my case. This is required to establish a neighbor relationship with my router.
+</code></pre><p>This guide doesn&rsquo;t cover any of the OSPF configuration on your main router. There are far too many different routers out there to even attempt to cover. The main trick to getting all of this working was stumbling across the <code>redistribute kernel</code> command. I was familiar with the <code>redisribute static</code> and <code>redistribute connected</code> commands from administering Cisco IOS, but the way that Wireguard inserts these routes into the routing table requires use of this <code>redistribute kernel</code> command.</p>
+<h2 id="save-your-changes">Save your changes</h2>
+<p>That&rsquo;s it! You can <code>end</code> and then <code>write memory</code> to save your configuration to <code>/etc/frr/frr.conf</code>. If you miss this part, all of this configuration will be erased when FRR is restarted.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Here are a couple of commands I used in the <code>vtysh</code> interface to verify my configuration.</p>
+<ul>
+<li><code>show ip ospf neighbor</code> - this should return a record showing your neighbor relationship with your main router</li>
+<li><code>show ip route kernel</code> - this should return all of your AllowedIPs networks that you have configured in Wireguard. These are the networks we are redistributing over OSPF.</li>
+<li><code>show ip ospf interface</code> - this should return a record indicating <code>ens160 is up</code>, or whatever your LAN interface on your Wireguard server is. You can also see neighbor count here, which should be 1 in a point-to-point OSPF network.</li>
+</ul>
+]]></content:encoded>
+      <source:markdown>
+I have a couple of Linux servers whose main purpose is to serve as a [Wireguard]( https://en.wikipedia.org/wiki/WireGuard) server. The peers on these servers are a combination of pure clients (like a mobile phone or laptop) and more traditional site-to-site tunnel connections (like a router at a remote location). The site-to-site connections usually are routing a remote network over the wireguard tunnel, something like a /24 network so you can access the far site&#39;s local network.
+
+Wireguard makes this easy to do, you just add the /24 network as an &#34;AllowedIP&#34; for that peer. Wireguard does the work of adding that route to the routing table on the Linux server itself. If this Wireguard server is part of a more complex network, though, you need to be sending these remote networks to your Wireguard server so everyone can access them, not just those using Wireguard. I have been forced to add static routes on my main router to point those networks to my Wireguard servers.
+
+Enter OSPF! If you are reading this, I am going to assume you know what OSPF is and why it&#39;s preferred over static routing. What follows is the steps I took to get my Wireguard &#34;AllowedIPs&#34; network automatically advertised to my main router using OSPF.
+
+Install FRR
+-----------
+
+[FRR](https://en.wikipedia.org/wiki/FRRouting) is a Linux package that implements a lot of networking routing protocols. On your server running Wireguard (I&#39;m assuming Debian/Ubuntu), running  `apt get install -y frr`  gets everything you need installed. This includes a `vtysh` command that dumps you into a Cisco IOS-like terminal to configure your OSPF routing.
+
+
+Enable OSPF daemon
+------------------
+
+Before configuring OSPF, you must enable the ospfd daemon in the FRR config. Edit `/etc/frr/daemons` and change the `ospfd=no` line to read `ospfd=yes`. Then `systemctl restart frr` is needed to restart FRR with OSPF enabled.
+
+Configure OSPF inside FRR
+-------------------------
+
+Run `vtysh` to enter the FRR VTY interface. `config terminal` to enter configuration mode. Here is the simplest configuration required to enable OSPF:
+
+```
+interface ens160
+	  ip ospf network point-to-point
+!
+router ospf
+	  ospf router-id 192.168.0.0
+	  redistribute kernel
+	  redistribute connected
+	  network 192.168.0.0/31 area 0
+```
+Here is the same config with my comments explaining the important parts:
+
+```
+interface ens160 # this is your linux interface that is facing your main router.
+  ip ospf network point-to-point # I am using a point-to-point style OSPF network, yours might be a broadcast type.
+!
+router ospf
+  ospf router-id 192.168.0.0 # this could be anything, but traditionally this is your LAN IP of this wireguard server
+  redistribute kernel # this was the tricky part. This is required to insert the Wireguard &#34;AllowedIPs&#34; networks into OSPF
+  redistribute connected # this is required to insert your wg0 (and other) networks in OSPF
+  network 192.168.0.0/31 area 0 # this is your LAN network for this wireguard server. Whatever is assigned to ens160 in my case. This is required to establish a neighbor relationship with my router.
+```
+
+This guide doesn&#39;t cover any of the OSPF configuration on your main router. There are far too many different routers out there to even attempt to cover. The main trick to getting all of this working was stumbling across the `redistribute kernel` command. I was familiar with the `redisribute static` and `redistribute connected` commands from administering Cisco IOS, but the way that Wireguard inserts these routes into the routing table requires use of this `redistribute kernel` command.
+
+Save your changes
+-----------------
+
+That&#39;s it! You can `end` and then `write memory` to save your configuration to `/etc/frr/frr.conf`. If you miss this part, all of this configuration will be erased when FRR is restarted.
+
+Troubleshooting
+---------------
+
+Here are a couple of commands I used in the `vtysh` interface to verify my configuration.
+
+- `show ip ospf neighbor` - this should return a record showing your neighbor relationship with your main router
+- `show ip route kernel` - this should return all of your AllowedIPs networks that you have configured in Wireguard. These are the networks we are redistributing over OSPF.
+- `show ip ospf interface` - this should return a record indicating `ens160 is up`, or whatever your LAN interface on your Wireguard server is. You can also see neighbor count here, which should be 1 in a point-to-point OSPF network.
+</source:markdown>
+    </item>
+    <item>
+      <title>Python script to retrieve DHCP leases from Palo Alto firewall</title>
+      <link>http://localhost:1313/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</link>
+      <pubDate>Fri, 03 Nov 2023 16:50:34 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/</guid>
+      <description>&lt;p&gt;I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.&lt;/p&gt;
+&lt;p&gt;To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like &lt;code&gt;jq&lt;/code&gt; to filter it quickly.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.</p>
+<p>To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like <code>jq</code> to filter it quickly.</p>
+<p>Here is the code:</p>
+<pre tabindex="0"><code>import requests
+import json
+from xmltodict import parse, ParsingInterrupted
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
+host = &#34;192.168.2.1&#34; # IP of Palo-Alto firewall goes here.
+key = &#34;KEY_GOES_HERE&#34; # Run `curl -X GET &#39;https://&lt;host&gt;/api/?type=keygen&amp;user=&lt;username&gt;&amp;password=&lt;password&gt;&#39;` to create API key.
+interface = &#34;ethernet1/2&#34; # can also use &#34;all&#34;
+
+def get_dhcp_leases(host, key, interface):
+	url = &#34;https://{host}/api/?type=op&amp;cmd=&lt;show&gt;&lt;dhcp&gt;&lt;server&gt;&lt;lease&gt;&lt;interface&gt;{interface}&lt;/interface&gt;&lt;/lease&gt;&lt;/server&gt;&lt;/dhcp&gt;&lt;/show&gt;&amp;key={key}&#34;.format(host=host, key=key, interface=interface)
+	response = requests.get(url,verify=False)
+	return response
+
+if __name__ == &#34;__main__&#34;:
+	dhcp_leases = get_dhcp_leases(host, key, interface)
+	data = parse(dhcp_leases.content)
+	entries = data[&#39;response&#39;][&#39;result&#39;]
+	print(json.dumps(entries, indent=4))
+</code></pre><p>I also have this hosted as a <a href="https://gist.github.com/tmanternach/21e3bba23261cbd5bacba2e50588acf6">gist</a> on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</p>
+]]></content:encoded>
+      <source:markdown>
+I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30&#43; seconds after login to give me a prompt.
+
+To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like `jq` to filter it quickly.
+
+Here is the code:
+
+```
+import requests
+import json
+from xmltodict import parse, ParsingInterrupted
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
+host = &#34;192.168.2.1&#34; # IP of Palo-Alto firewall goes here.
+key = &#34;KEY_GOES_HERE&#34; # Run `curl -X GET &#39;https://&lt;host&gt;/api/?type=keygen&amp;user=&lt;username&gt;&amp;password=&lt;password&gt;&#39;` to create API key.
+interface = &#34;ethernet1/2&#34; # can also use &#34;all&#34;
+
+def get_dhcp_leases(host, key, interface):
+	url = &#34;https://{host}/api/?type=op&amp;cmd=&lt;show&gt;&lt;dhcp&gt;&lt;server&gt;&lt;lease&gt;&lt;interface&gt;{interface}&lt;/interface&gt;&lt;/lease&gt;&lt;/server&gt;&lt;/dhcp&gt;&lt;/show&gt;&amp;key={key}&#34;.format(host=host, key=key, interface=interface)
+	response = requests.get(url,verify=False)
+	return response
+
+if __name__ == &#34;__main__&#34;:
+	dhcp_leases = get_dhcp_leases(host, key, interface)
+	data = parse(dhcp_leases.content)
+	entries = data[&#39;response&#39;][&#39;result&#39;]
+	print(json.dumps(entries, indent=4))
+```
+
+I also have this hosted as a [gist](https://gist.github.com/tmanternach/21e3bba23261cbd5bacba2e50588acf6) on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</source:markdown>
+    </item>
+    <item>
+      <title>Dresser drawer lighting</title>
+      <link>http://localhost:1313/2023/08/20/dresser-drawer-lighting/</link>
+      <pubDate>Sun, 20 Aug 2023 21:49:17 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/08/20/dresser-drawer-lighting/</guid>
+      <description>&lt;p&gt;I realized today that the most used &amp;ldquo;smart home&amp;rdquo; project I have done is both 100% battery powered and not connected to WiFi or the internet at all. I added a light to my dresser drawers that turns on when the drawer is opened and off when it is closed, just like the inside your refrigator. The idea is so I can grab clothes in the morning without waking up my spouse by turning a bright light on. It&amp;rsquo;s been working every time I open my dresser for over 18 months now. It is a very simple idea but I had never seen it done before, so here is a quick run-down of how I made it work.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I realized today that the most used &ldquo;smart home&rdquo; project I have done is both 100% battery powered and not connected to WiFi or the internet at all. I added a light to my dresser drawers that turns on when the drawer is opened and off when it is closed, just like the inside your refrigator. The idea is so I can grab clothes in the morning without waking up my spouse by turning a bright light on. It&rsquo;s been working every time I open my dresser for over 18 months now. It is a very simple idea but I had never seen it done before, so here is a quick run-down of how I made it work.</p>
+<h3 id="materials">Materials</h3>
+<ul>
+<li>9V battery</li>
+<li>2-conductor wire, enough to run from the battery to each drawer</li>
+<li>a 12V LED or 2 for each drawer (I used these that I had leftover from another project)</li>
+<li>a micro limit switch for each drawer</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>It&rsquo;s a very simple electrical circuit. You are quite literally just flipping a light switch. Still, it&rsquo;s probably wise to wire up a proof of concept.</p>
+<p>I used 12V LEDs but a 9V battery. This naturally brought the brightness of the LEDs down to a more manageable level without the need for some sort of brightness knob. The entire goal of this project was to keep it simple and not alter the exterior appearance of the dresser.</p>
+]]></content:encoded>
+      <source:markdown>
+I realized today that the most used &#34;smart home&#34; project I have done is both 100% battery powered and not connected to WiFi or the internet at all. I added a light to my dresser drawers that turns on when the drawer is opened and off when it is closed, just like the inside your refrigator. The idea is so I can grab clothes in the morning without waking up my spouse by turning a bright light on. It&#39;s been working every time I open my dresser for over 18 months now. It is a very simple idea but I had never seen it done before, so here is a quick run-down of how I made it work.
+
+### Materials
+
+- 9V battery
+- 2-conductor wire, enough to run from the battery to each drawer
+- a 12V LED or 2 for each drawer (I used these that I had leftover from another project)
+- a micro limit switch for each drawer
+
+### Setup
+
+It&#39;s a very simple electrical circuit. You are quite literally just flipping a light switch. Still, it&#39;s probably wise to wire up a proof of concept.
+
+I used 12V LEDs but a 9V battery. This naturally brought the brightness of the LEDs down to a more manageable level without the need for some sort of brightness knob. The entire goal of this project was to keep it simple and not alter the exterior appearance of the dresser.</source:markdown>
+    </item>
+    <item>
+      <title>Control Palo Alto GlobalProtect VPN using AppleScript</title>
+      <link>http://localhost:1313/2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/</link>
+      <pubDate>Thu, 17 Aug 2023 19:35:22 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/08/17/control-palo-alto-globalprotect-vpn-using-applescript/</guid>
+      <description>&lt;p&gt;I know it&amp;rsquo;s a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN &amp;ldquo;automatically&amp;rdquo;. I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!&lt;/p&gt;
+&lt;p&gt;This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I know it&rsquo;s a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN &ldquo;automatically&rdquo;. I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!</p>
+<p>This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).</p>
+<pre tabindex="0"><code>(*
+Toggle GlobalProtect VPN with AppleScript
+Tested using macOS Ventura 13.4.1 and GlobalProtect version 6.2.0-89
+Written by Trevor Manternach, August 2023.
+*)
+
+tell application &#34;System Events&#34; to tell process &#34;GlobalProtect&#34;
+  click menu bar item 1 of menu bar 2
+  set statusText to name of static text 1 of window 1
+  if statusText is &#34;Not Connected&#34; then
+    # GlobalProtect is disconnected, so let&#39;s connect
+    click button &#34;Connect&#34; of window 1
+    set entireContents to entire contents of window 1
+  else if statusText is &#34;Connected&#34; then
+    # GlobalProtect is connected, so let&#39;s disconnect
+    set windowText to entire contents of window 1
+    repeat with theItem in windowText
+      if (class of theItem is button) then
+        if (value of attribute &#34;AXTitle&#34; of theItem is &#34;Disconnect&#34;) then
+          # We found a Disconnect button on the main page, let&#39;s click it.
+          click theItem
+          exit repeat
+        else
+          # We did not find a Disconnect button on the main page, let&#39;s hope there is one in the Settings Menu.
+          click button &#34;Global Protect Options Menu&#34; of window 1
+          click menu item &#34;Disconnect&#34; of menu &#34;Global Protect Options Menu&#34; of button &#34;Global Protect Options Menu&#34; of window 1
+          exit repeat
+        end if
+      end if
+    end repeat
+  end if
+  click menu bar item 1 of menu bar 2
+end tell
+</code></pre><p>I also have this hosted as a <a href="https://gist.github.com/tmanternach/cbd4c213eab8569e38d6cd021b6255e5">gist</a> on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</p>
+]]></content:encoded>
+      <source:markdown>
+I know it&#39;s a little strange to still be writing AppleScript in 2023, but this was the best way I found to easily connect and disconnect from a GlobalProtect VPN &#34;automatically&#34;. I trigger this from a Keyboard Maestro shortcut, you are free to trigger it any way you wish!
+
+This is a simple script that will toggle the connect/disconnect state of GlobalProtect on macOS. Tested with the latest version of GlobalProtect (v6.2.0-89) and macOS Ventura (13.4.1).
+```
+(*
+Toggle GlobalProtect VPN with AppleScript
+Tested using macOS Ventura 13.4.1 and GlobalProtect version 6.2.0-89
+Written by Trevor Manternach, August 2023.
+*)
+
+tell application &#34;System Events&#34; to tell process &#34;GlobalProtect&#34;
+  click menu bar item 1 of menu bar 2
+  set statusText to name of static text 1 of window 1
+  if statusText is &#34;Not Connected&#34; then
+    # GlobalProtect is disconnected, so let&#39;s connect
+    click button &#34;Connect&#34; of window 1
+    set entireContents to entire contents of window 1
+  else if statusText is &#34;Connected&#34; then
+    # GlobalProtect is connected, so let&#39;s disconnect
+    set windowText to entire contents of window 1
+    repeat with theItem in windowText
+      if (class of theItem is button) then
+        if (value of attribute &#34;AXTitle&#34; of theItem is &#34;Disconnect&#34;) then
+          # We found a Disconnect button on the main page, let&#39;s click it.
+          click theItem
+          exit repeat
+        else
+          # We did not find a Disconnect button on the main page, let&#39;s hope there is one in the Settings Menu.
+          click button &#34;Global Protect Options Menu&#34; of window 1
+          click menu item &#34;Disconnect&#34; of menu &#34;Global Protect Options Menu&#34; of button &#34;Global Protect Options Menu&#34; of window 1
+          exit repeat
+        end if
+      end if
+    end repeat
+  end if
+  click menu bar item 1 of menu bar 2
+end tell
+```
+I also have this hosted as a [gist](https://gist.github.com/tmanternach/cbd4c213eab8569e38d6cd021b6255e5) on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</source:markdown>
+    </item>
+    <item>
+      <title>Home Assistant Quick Bar</title>
+      <link>http://localhost:1313/2023/08/04/home-assistant-quick-bar/</link>
+      <pubDate>Fri, 04 Aug 2023 17:00:00 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/08/04/home-assistant-quick-bar/</guid>
+      <description>&lt;p&gt;I discovered that &lt;a href=&#34;https://www.home-assistant.io/&#34;&gt;Home Assistant&lt;/a&gt; has a not-so-recent feature called &amp;ldquo;&lt;a href=&#34;https://www.home-assistant.io/docs/tools/quick-bar/&#34;&gt;Quick Bar&lt;/a&gt;&amp;rdquo; that I somehow missed when it was released in 2020. In short, it allows you to press the &lt;code&gt;e&lt;/code&gt; (for entity search) or &lt;code&gt;c&lt;/code&gt; (for command search) anywhere in the Home Assistant web interface to access a Spotlight-style search box. This allows you access settings and devices in Home Assistant with just a few keystrokes.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I discovered that <a href="https://www.home-assistant.io/">Home Assistant</a> has a not-so-recent feature called &ldquo;<a href="https://www.home-assistant.io/docs/tools/quick-bar/">Quick Bar</a>&rdquo; that I somehow missed when it was released in 2020. In short, it allows you to press the <code>e</code> (for entity search) or <code>c</code> (for command search) anywhere in the Home Assistant web interface to access a Spotlight-style search box. This allows you access settings and devices in Home Assistant with just a few keystrokes.</p>
+]]></content:encoded>
+      <source:markdown>
+I discovered that [Home Assistant](https://www.home-assistant.io/) has a not-so-recent feature called &#34;[Quick Bar](https://www.home-assistant.io/docs/tools/quick-bar/)&#34; that I somehow missed when it was released in 2020. In short, it allows you to press the `e` (for entity search) or `c` (for command search) anywhere in the Home Assistant web interface to access a Spotlight-style search box. This allows you access settings and devices in Home Assistant with just a few keystrokes.</source:markdown>
+    </item>
+    <item>
+      <title>Trying out Nikola</title>
+      <link>http://localhost:1313/2023/07/09/trying-out-nikola/</link>
+      <pubDate>Sun, 09 Jul 2023 20:11:29 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2023/07/09/trying-out-nikola/</guid>
+      <description>&lt;p&gt;I discovered a new static site generator today, &lt;a href=&#34;https://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I discovered a new static site generator today, <a href="https://getnikola.com/">Nikola</a>.</p>
+]]></content:encoded>
+      <source:markdown>
+I discovered a new static site generator today, [Nikola](https://getnikola.com/).</source:markdown>
+    </item>
+    <item>
+      <title>Audiobooks</title>
+      <link>http://localhost:1313/2022/11/25/audiobooks/</link>
+      <pubDate>Fri, 25 Nov 2022 18:39:11 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2022/11/25/audiobooks/</guid>
+      <description>&lt;p&gt;It’s been years since I last paid for an Audible.com subscription. I just signed up this week ($5/month for 3 months) and it’s been a delight so far. I discovered that you can pretty easily remove the DRM on the audiobook .aax file. I am using &lt;a href=&#34;https://audible-converter.ml/&#34;&gt;Audible Tools&lt;/a&gt; to help me create the ffmpeg command to do this.&lt;/p&gt;
+&lt;p&gt;Another recent discovery is that &lt;a href=&#34;https://overcast.fm/&#34;&gt;Overcast&lt;/a&gt;, my podcast player of choice, seems to natively support .m4b files (audiobook file format). It even includes artwork and chapters, so it behaves just like most of the podcasts I listen to.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>It’s been years since I last paid for an Audible.com subscription. I just signed up this week ($5/month for 3 months) and it’s been a delight so far. I discovered that you can pretty easily remove the DRM on the audiobook .aax file. I am using <a href="https://audible-converter.ml/">Audible Tools</a> to help me create the ffmpeg command to do this.</p>
+<p>Another recent discovery is that <a href="https://overcast.fm/">Overcast</a>, my podcast player of choice, seems to natively support .m4b files (audiobook file format). It even includes artwork and chapters, so it behaves just like most of the podcasts I listen to.</p>
+]]></content:encoded>
+      <source:markdown>
+It’s been years since I last paid for an Audible.com subscription. I just signed up this week ($5/month for 3 months) and it’s been a delight so far. I discovered that you can pretty easily remove the DRM on the audiobook .aax file. I am using [Audible Tools](https://audible-converter.ml/) to help me create the ffmpeg command to do this.
+
+Another recent discovery is that [Overcast](https://overcast.fm/), my podcast player of choice, seems to natively support .m4b files (audiobook file format). It even includes artwork and chapters, so it behaves just like most of the podcasts I listen to.</source:markdown>
+    </item>
+    <item>
+      <title>1997 Photo at computer</title>
+      <link>http://localhost:1313/2022/08/18/the-earliest-photo/</link>
+      <pubDate>Thu, 18 Aug 2022 10:35:00 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2022/08/18/the-earliest-photo/</guid>
+      <description>&lt;p&gt;The earliest photo I have of me at a computer. Circa 1997!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/1997-Trevor.jpg&#34; alt=&#34;Trevor at a computer in 1997&#34;&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>The earliest photo I have of me at a computer. Circa 1997!</p>
+<p><img src="/images/1997-Trevor.jpg" alt="Trevor at a computer in 1997"></p>
+]]></content:encoded>
+      <source:markdown>
+The earliest photo I have of me at a computer. Circa 1997!
+
+![Trevor at a computer in 1997](/images/1997-Trevor.jpg)</source:markdown>
+    </item>
+    <item>
+      <title>My iPod history</title>
+      <link>http://localhost:1313/2022/06/04/my-ipod-history/</link>
+      <pubDate>Sat, 04 Jun 2022 07:41:00 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2022/06/04/my-ipod-history/</guid>
+      <description>&lt;p&gt;Last month Apple &lt;a href=&#34;https://www.apple.com/newsroom/2022/05/the-music-lives-on/&#34;&gt;announced&lt;/a&gt; the end of the iPod. I thought it might be fun to document my history with the product.&lt;/p&gt;
+&lt;p&gt;&amp;ndash;&lt;/p&gt;
+&lt;p&gt;I got my first iPod in March 2005. I believe I bought mine at Best Buy on a weekend trip 350 miles away from home.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/4th-Gen-iPod.jpg&#34; alt=&#34;Picture of my first iPod&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I was listening to a lot of podcasts in those early days and had to use &lt;a href=&#34;https://en.wikipedia.org/wiki/Juice_(aggregator)&#34;&gt;&amp;ldquo;podcatcher&amp;rdquo; software&lt;/a&gt; because iTunes didn&amp;rsquo;t support podcasts yet. That changed later that year when &lt;a href=&#34;https://en.wikipedia.org/wiki/History_of_iTunes#iTunes_4&#34;&gt;iTunes 4.9&lt;/a&gt; added podcasts and the rest is history.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Last month Apple <a href="https://www.apple.com/newsroom/2022/05/the-music-lives-on/">announced</a> the end of the iPod. I thought it might be fun to document my history with the product.</p>
+<p>&ndash;</p>
+<p>I got my first iPod in March 2005. I believe I bought mine at Best Buy on a weekend trip 350 miles away from home.</p>
+<p><img src="/images/4th-Gen-iPod.jpg" alt="Picture of my first iPod"></p>
+<p>I was listening to a lot of podcasts in those early days and had to use <a href="https://en.wikipedia.org/wiki/Juice_(aggregator)">&ldquo;podcatcher&rdquo; software</a> because iTunes didn&rsquo;t support podcasts yet. That changed later that year when <a href="https://en.wikipedia.org/wiki/History_of_iTunes#iTunes_4">iTunes 4.9</a> added podcasts and the rest is history.</p>
+<p>I visited that same Best Buy a couple years later when the iPod Touch was released. I remember checking their website and they said they had them in stock, but when I got to the store I couldn&rsquo;t find them. I finally asked and they were still in the back, they went and got one for me.</p>
+<p><img src="/images/iPod-Touch.jpg" alt="My first iPod Touch"></p>
+<p>The iPod Touch was so much fun back then. The iPhone wasn&rsquo;t &ldquo;in&rdquo; Montana back then (no joke) and so the Touch was as close as I could get. I remember jailbreaking the thing, and even hanging out in IRC chatrooms trying to troubleshoot my jailbreak attempts. :-D</p>
+<p>This past winter I spent ~$100 on new parts to revive my old 4th gen iPod. It now has new life with <a href="https://www.ifixit.com/Store/iPod/iPod-4G-Photo-Battery/IF193-016?o=3">a fresh battery</a> and <a href="https://www.iflash.xyz/store/iflash-solo/">an SD card</a> in place of the 20GB spinning hard drive. It&rsquo;s hard to believe a piece of consumer technology from 17 years ago is still alive and well.</p>
+<p>I love iPod. It was one of my first adventures into a lifetime of technology.</p>
+]]></content:encoded>
+      <source:markdown>
+Last month Apple [announced](https://www.apple.com/newsroom/2022/05/the-music-lives-on/) the end of the iPod. I thought it might be fun to document my history with the product.
+
+--
+
+I got my first iPod in March 2005. I believe I bought mine at Best Buy on a weekend trip 350 miles away from home.
+
+![Picture of my first iPod](/images/4th-Gen-iPod.jpg)
+
+I was listening to a lot of podcasts in those early days and had to use [&#34;podcatcher&#34; software](https://en.wikipedia.org/wiki/Juice_(aggregator)) because iTunes didn&#39;t support podcasts yet. That changed later that year when [iTunes 4.9](https://en.wikipedia.org/wiki/History_of_iTunes#iTunes_4) added podcasts and the rest is history.
+
+I visited that same Best Buy a couple years later when the iPod Touch was released. I remember checking their website and they said they had them in stock, but when I got to the store I couldn&#39;t find them. I finally asked and they were still in the back, they went and got one for me.
+
+![My first iPod Touch](/images/iPod-Touch.jpg)
+
+The iPod Touch was so much fun back then. The iPhone wasn&#39;t &#34;in&#34; Montana back then (no joke) and so the Touch was as close as I could get. I remember jailbreaking the thing, and even hanging out in IRC chatrooms trying to troubleshoot my jailbreak attempts. :-D
+
+This past winter I spent ~$100 on new parts to revive my old 4th gen iPod. It now has new life with [a fresh battery](https://www.ifixit.com/Store/iPod/iPod-4G-Photo-Battery/IF193-016?o=3) and [an SD card](https://www.iflash.xyz/store/iflash-solo/) in place of the 20GB spinning hard drive. It&#39;s hard to believe a piece of consumer technology from 17 years ago is still alive and well.
+
+I love iPod. It was one of my first adventures into a lifetime of technology.
+</source:markdown>
+    </item>
+    <item>
+      <title>AdGuard Wildcard DNS with Nginx Proxy Manager</title>
+      <link>http://localhost:1313/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</link>
+      <pubDate>Sat, 30 Apr 2022 20:59:42 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2022/04/30/adguard-wildcard-dns-with-nginx-proxy-manager/</guid>
+      <description>&lt;p&gt;I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;You need to be using &lt;a href=&#34;https://adguard.com/en/adguard-home/overview.html&#34;&gt;AdGuard Home&lt;/a&gt; for DNS&lt;/li&gt;
+&lt;li&gt;You want to quickly add new domains to &lt;a href=&#34;https://nginxproxymanager.com/&#34;&gt;Nginx Proxy Manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;adguard-home-setup&#34;&gt;AdGuard Home setup&lt;/h3&gt;
+&lt;p&gt;In the AdGuard Home web interface, go to Filters-&amp;gt;DNS rewrites.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/adguard-1.png&#34; alt=&#34;Screenshot of DNS rewrite options on AdGuard Home&#34; title=&#34;Screenshot of DNS rewrite options on AdGuard Home&#34;&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>You need to be using <a href="https://adguard.com/en/adguard-home/overview.html">AdGuard Home</a> for DNS</li>
+<li>You want to quickly add new domains to <a href="https://nginxproxymanager.com/">Nginx Proxy Manager</a></li>
+</ul>
+<h3 id="adguard-home-setup">AdGuard Home setup</h3>
+<p>In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.</p>
+<p><img src="/images/adguard-1.png" alt="Screenshot of DNS rewrite options on AdGuard Home" title="Screenshot of DNS rewrite options on AdGuard Home"></p>
+<p>Click <strong>Add DNS rewrite</strong> and enter something like <em>*.home</em> in the domain name field.</p>
+<p>Enter the IP address of your NPM host and click <strong>Save</strong>.</p>
+<h3 id="nginx-proxy-manager">Nginx Proxy Manager</h3>
+<p><img src="/images/nginx-1.png" alt="Screenshot of Nginx Proxy Manager" title="Screenshot of Nginx Proxy Manager"></p>
+<p>There really isn&rsquo;t anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!</p>
+<p>Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So <em>adguard.home</em> and <em>dns.home</em> can both get me to the same place. This helps when I can&rsquo;t remember the name of a service, or when you change software you can keep using something like <em>dashboard.home</em> for your <a href="https://github.com/bastienwirtz/homer">dashboard of choice</a>.</p>
+]]></content:encoded>
+      <source:markdown>
+I started using Nginx Proxy Manger at home recently and found a fast and easy way to add internal domains to it. Here is a simple walkthrough.
+
+### Prerequisites
+
+- You need to be using [AdGuard Home](https://adguard.com/en/adguard-home/overview.html) for DNS
+- You want to quickly add new domains to [Nginx Proxy Manager](https://nginxproxymanager.com/)
+
+### AdGuard Home setup
+
+In the AdGuard Home web interface, go to Filters-&gt;DNS rewrites.
+
+![Screenshot of DNS rewrite options on AdGuard Home](/images/adguard-1.png &#34;Screenshot of DNS rewrite options on AdGuard Home&#34;)
+
+Click **Add DNS rewrite** and enter something like *\*.home* in the domain name field.
+
+Enter the IP address of your NPM host and click **Save**.
+
+### Nginx Proxy Manager
+
+![Screenshot of Nginx Proxy Manager](/images/nginx-1.png &#34;Screenshot of Nginx Proxy Manager&#34;)
+
+There really isn&#39;t anything special to do in NPM. Just add a Proxy Host and in the domain names field you can enter anything as long as it ends in .home (or whatever you chose for a wildcard). www.home even works!
+
+Another little feature I discovered while setting this up is that I can add multiple domain names for each proxy host. So *adguard.home* and *dns.home* can both get me to the same place. This helps when I can&#39;t remember the name of a service, or when you change software you can keep using something like *dashboard.home* for your [dashboard of choice](https://github.com/bastienwirtz/homer).
+
+
+</source:markdown>
+    </item>
+    <item>
+      <title>2020 Books I&#39;ve Read</title>
+      <link>http://localhost:1313/2020/01/01/books-ive-read/</link>
+      <pubDate>Wed, 01 Jan 2020 16:08:51 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2020/01/01/books-ive-read/</guid>
+      <description>A list of the books I have read (or listened to) in 2020.</description>
+      <content:encoded><![CDATA[<p><!-- raw HTML omitted --><em>Killing Kennedy: The End of Camelot</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+8 hours 25 minutes. Started January 11. Finished January 16th.</p>
+<p><!-- raw HTML omitted --><em>Killing Lincoln</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+7 hours 49 minutes. Started June 7th. Finished June 15th.</p>
+<p><!-- raw HTML omitted --><em>True Crimes and Misdemeanors: The Investigation of Donald Trump</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+496 pages. Started August 18th. Finished October 1st.</p>
+<p><!-- raw HTML omitted --><em>Where Law Ends: Inside the Mueller Investigation</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+432 pages. Started October 1st. Finished October 27th.</p>
+<p><!-- raw HTML omitted --><em>Battle for the Big Sky</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+286 pages. Started October 28th. Finished November 25th.</p>
+<p><!-- raw HTML omitted --><em>The Conscience of a Conservative</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+144 pages. Started November 26th. Finished November 28th.</p>
+<p><!-- raw HTML omitted --><em>The War on Normal People</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+304 pages. Started November 28th. Finished December 2nd.</p>
+]]></content:encoded>
+      <source:markdown>
+&lt;a href=&#34;https://www.goodreads.com/book/show/13538641-killing-kennedy&#34; target=&#34;_blank&#34;&gt;*Killing Kennedy: The End of Camelot*&lt;/a&gt;&lt;br&gt;
+8 hours 25 minutes. Started January 11. Finished January 16th.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/10587120-killing-lincoln&#34; target=&#34;_blank&#34;&gt;*Killing Lincoln*&lt;/a&gt;&lt;br&gt;
+7 hours 49 minutes. Started June 7th. Finished June 15th.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/52836282-true-crimes-and-misdemeanors&#34; target=&#34;_blank&#34;&gt;*True Crimes and Misdemeanors: The Investigation of Donald Trump*&lt;/a&gt;&lt;br&gt;
+496 pages. Started August 18th. Finished October 1st.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/54545843-where-law-ends&#34; target=&#34;_blank&#34;&gt;*Where Law Ends: Inside the Mueller Investigation*&lt;/a&gt;&lt;br&gt;
+432 pages. Started October 1st. Finished October 27th.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/24583081-battle-for-the-big-sky&#34; target=&#34;_blank&#34;&gt;*Battle for the Big Sky*&lt;/a&gt;&lt;br&gt;
+286 pages. Started October 28th. Finished November 25th.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/244909.The_Conscience_of_a_Conservative&#34; target=&#34;_blank&#34;&gt;*The Conscience of a Conservative*&lt;/a&gt;&lt;br&gt;
+144 pages. Started November 26th. Finished November 28th.
+
+&lt;a href=&#34;https://www.goodreads.com/book/show/36204293-the-war-on-normal-people&#34; target=&#34;_blank&#34;&gt;*The War on Normal People*&lt;/a&gt;&lt;br&gt;
+304 pages. Started November 28th. Finished December 2nd.
+</source:markdown>
+    </item>
+    <item>
+      <title>2019 Books I&#39;ve Read</title>
+      <link>http://localhost:1313/2019/01/01/books-ive-read/</link>
+      <pubDate>Tue, 01 Jan 2019 16:06:36 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2019/01/01/books-ive-read/</guid>
+      <description>A list of the books I have read (or listened to) in 2019.</description>
+      <content:encoded><![CDATA[<p><!-- raw HTML omitted --><em>Animal Farm</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+140 pages. Started December 29th. Finished January 9th.</p>
+<p><!-- raw HTML omitted --><em>Doing Justice</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+368 pages. Started April 15th. Finished April 27th.</p>
+<p><!-- raw HTML omitted --><em>Pound Foolish</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+9 hours 7 minutes. Started May 2nd. Finished May 14th.</p>
+<p><!-- raw HTML omitted --><em>Everything Is Obvious: *Once You Know the Answer</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+368 pages. Started May 15th. Finished May 31st.</p>
+<p><!-- raw HTML omitted --><em>An Absolutely Remarkable Thing</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+352 pages. Started June 1st. Finished June 12th.</p>
+<p><!-- raw HTML omitted --><em>The President is Missing</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+527 pages. Started June 16th. Finished June 24th.</p>
+<p><!-- raw HTML omitted --><em>Paper Towns</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+305 pages. Started June 25th. Finished July 9th.</p>
+<p><!-- raw HTML omitted --><em>Permanent Record</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+352 pages. Started December 1st. Finished December 4th.</p>
+<p><!-- raw HTML omitted --><em>The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+336 pages. Started November 27th. Finished December 13th.</p>
+<p><!-- raw HTML omitted --><em>1984</em><!-- raw HTML omitted --><!-- raw HTML omitted -->
+326 pages. Started December 16th. Finished January 9th.</p>
+]]></content:encoded>
+      <source:markdown>
+&lt;a href=&#34;https://smile.amazon.com/Animal-Farm-Classics-George-Orwell-ebook/dp/B07JH73R6T/&#34; target=&#34;_blank&#34;&gt;*Animal Farm*&lt;/a&gt;&lt;br&gt;
+140 pages. Started December 29th. Finished January 9th.
+
+&lt;a href=&#34;https://www.amazon.com/Doing-Justice-Prosecutors-Thoughts-Punishment/dp/0525521127&#34; target=&#34;_blank&#34;&gt;*Doing Justice*&lt;/a&gt;&lt;br&gt;
+368 pages. Started April 15th. Finished April 27th.
+
+&lt;a href=&#34;https://www.amazon.com/Pound-Foolish-Exposing-Personal-Industry/dp/B00BI6JFJM/&#34; target=&#34;_blank&#34;&gt;*Pound Foolish*&lt;/a&gt;&lt;br&gt;
+9 hours 7 minutes. Started May 2nd. Finished May 14th.
+
+&lt;a href=&#34;https://smile.amazon.com/dp/B004DEPHGQ/&#34; target=&#34;_blank&#34;&gt;*Everything Is Obvious: \*Once You Know the Answer*&lt;/a&gt;&lt;br&gt;
+368 pages. Started May 15th. Finished May 31st.
+
+&lt;a href=&#34;https://smile.amazon.com/Absolutely-Remarkable-Thing-Novel-ebook/dp/B0796DR2XV/&#34; target=&#34;_blank&#34;&gt;*An Absolutely Remarkable Thing*&lt;/a&gt;&lt;br&gt;
+352 pages. Started June 1st. Finished June 12th.
+
+&lt;a href=&#34;https://smile.amazon.com/President-Missing-Novel-James-Patterson-ebook/dp/B072F3MYRH/&#34; target=&#34;_blank&#34;&gt;*The President is Missing*&lt;/a&gt;&lt;br&gt;
+527 pages. Started June 16th. Finished June 24th.
+
+&lt;a href=&#34;https://smile.amazon.com/Paper-Towns-John-Green/dp/0525478183/&#34; target=&#34;_blank&#34;&gt;*Paper Towns*&lt;/a&gt;&lt;br&gt;
+305 pages. Started June 25th. Finished July 9th.
+
+&lt;a href=&#34;https://www.amazon.com/Permanent-Record-Edward-Snowden/dp/1250237238/&#34; target=&#34;_blank&#34;&gt;*Permanent Record*&lt;/a&gt;&lt;br&gt;
+352 pages. Started December 1st. Finished December 4th.
+
+&lt;a href=&#34;https://smile.amazon.com/Feather-Thief-Obsession-Natural-History/dp/1101981636/&#34; target=&#34;_blank&#34;&gt;*The Feather Thief: Beauty, Obsession, and the Natural History Heist of the Century*&lt;/a&gt;&lt;br&gt;
+336 pages. Started November 27th. Finished December 13th.
+
+&lt;a href=&#34;https://smile.amazon.com/1984-George-Orwell-ebook/dp/B0811YH6RT/&#34; target=&#34;_blank&#34;&gt;*1984*&lt;/a&gt;&lt;br&gt;
+326 pages. Started December 16th. Finished January 9th.
+</source:markdown>
+    </item>
+    <item>
+      <title>2018 Books I&#39;ve Read</title>
+      <link>http://localhost:1313/2018/01/01/books-ive-read/</link>
+      <pubDate>Mon, 01 Jan 2018 16:03:50 -0600</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2018/01/01/books-ive-read/</guid>
+      <description>A list of the books I have read (or listened to) in 2019.</description>
+      <content:encoded><![CDATA[<p><a href="http://a.co/es7D6SZ"><em>Evicted. Poverty and Profit in the American City</em></a><br>
+448 pages. Started April 11th. Finished June 3rd.</p>
+<p><a href="http://a.co/h3aF1ZJ"><em>A Higher Loyalty: Truth, Lies, and Leadership</em></a><br>
+312 pages. Started June 3rd. Finished June 11th.</p>
+<p><a href="http://a.co/6RwHWwH"><em>Turtles All The Way Down</em></a><br>
+304 pages. Started June 12th. Finished June 16th.</p>
+<p><a href="https://www.amazon.com/dp/B07BKPF9BF/"><em>The Hellfire Club</em></a><br>
+9 hours 58 minutes. Started July 6th. Finished July 11th.</p>
+<p><a href="http://a.co/d/47NMz23"><em>Of Mice and Men</em></a><br>
+112 pages. Started September 3rd. Finished September 7th.</p>
+<p><a href="http://a.co/d/fRUUJac"><em>Fear: Trump in the White House</em></a><br>
+12 hours 20 minutes. Started September 11th. Finished September 17th.</p>
+<p><a href="https://www.amazon.com/Old-Man-Sea-Ernest-Hemingway-ebook-dp-B000FC0SH8/dp/B000FC0SH8/"><em>The Old Man and the Sea</em></a><br>
+128 pages. Started September 22nd. Finished September 25th.</p>
+<p><a href="https://www.amazon.com/Tipping-Point-Little-Things-Difference/dp/B000OYD8T2"><em>The Tipping Point</em></a><br>
+8 hours 33 minutes. Started October 15th. Finished December 11th.</p>
+]]></content:encoded>
+      <source:markdown>
+[*Evicted. Poverty and Profit in the American City*](http://a.co/es7D6SZ)  
+448 pages. Started April 11th. Finished June 3rd.
+
+[*A Higher Loyalty: Truth, Lies, and Leadership*](http://a.co/h3aF1ZJ)  
+312 pages. Started June 3rd. Finished June 11th.
+
+[*Turtles All The Way Down*](http://a.co/6RwHWwH)  
+304 pages. Started June 12th. Finished June 16th.
+
+[*The Hellfire Club*](https://www.amazon.com/dp/B07BKPF9BF/)  
+9 hours 58 minutes. Started July 6th. Finished July 11th.
+
+[*Of Mice and Men*](http://a.co/d/47NMz23)  
+112 pages. Started September 3rd. Finished September 7th.
+
+[*Fear: Trump in the White House*](http://a.co/d/fRUUJac)  
+12 hours 20 minutes. Started September 11th. Finished September 17th.
+
+[*The Old Man and the Sea*](https://www.amazon.com/Old-Man-Sea-Ernest-Hemingway-ebook-dp-B000FC0SH8/dp/B000FC0SH8/)  
+128 pages. Started September 22nd. Finished September 25th.
+
+[*The Tipping Point*](https://www.amazon.com/Tipping-Point-Little-Things-Difference/dp/B000OYD8T2)  
+8 hours 33 minutes. Started October 15th. Finished December 11th.
+</source:markdown>
+    </item>
+    <item>
+      <title>2017 Books I&#39;ve Read</title>
+      <link>http://localhost:1313/2017/01/01/books-ive-read/</link>
+      <pubDate>Sun, 01 Jan 2017 15:09:37 -0700</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2017/01/01/books-ive-read/</guid>
+      <description>A list of the books I have read (or listened to) in 2017.</description>
+      <content:encoded><![CDATA[<p>This is my first year trying this. I&rsquo;m going to keep a running list of the books I read this year.</p>
+<p><a href="https://www.amazon.com/Then-There-Were-None-ebook/dp/B000FC1RCI/"><em>And Then There Were None</em></a>
+257 pages. Started January 1st. Finished January 7th.</p>
+<p><a href="https://www.amazon.com/gp/product/B01N1F24U7/"><em>How to Win Friends and Influence People</em></a>
+226 pages. Started January 21st. Finished February 20th.</p>
+<p><a href="https://www.amazon.com/gp/product/B00K0OI42W/"><em>To Kill a Mockingbird</em></a>
+385 pages. Started February 22nd. Finished March 16th.</p>
+<p><a href="https://www.amazon.com/This-Life-Live-Extraordinary-Ordinary/dp/B01MU00N4Z/"><em>This Life I Live</em></a>
+6 hours 4 minutes. Started March 12th. Finished March 18th.</p>
+]]></content:encoded>
+      <source:markdown>
+This is my first year trying this. I&#39;m going to keep a running list of the books I read this year.
+
+[*And Then There Were None*](https://www.amazon.com/Then-There-Were-None-ebook/dp/B000FC1RCI/)
+257 pages. Started January 1st. Finished January 7th.
+
+[*How to Win Friends and Influence People*](https://www.amazon.com/gp/product/B01N1F24U7/)
+226 pages. Started January 21st. Finished February 20th.
+
+[*To Kill a Mockingbird*](https://www.amazon.com/gp/product/B00K0OI42W/)
+385 pages. Started February 22nd. Finished March 16th.
+
+[*This Life I Live*](https://www.amazon.com/This-Life-Live-Extraordinary-Ordinary/dp/B01MU00N4Z/)
+6 hours 4 minutes. Started March 12th. Finished March 18th.
+</source:markdown>
+    </item>
+    <item>
+      <title>Ok Google: Play Music on the Jukebox</title>
+      <link>http://localhost:1313/2016/12/27/ok-google-play-music-on-the-jukebox/</link>
+      <pubDate>Tue, 27 Dec 2016 16:15:05 -0700</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/2016/12/27/ok-google-play-music-on-the-jukebox/</guid>
+      <description>Follow along as I retro-fit my old jukebox to stream music from the internet.</description>
+      <content:encoded><![CDATA[<h2 id="intro">Intro</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/jukebox.jpg" alt="Jukebox"></p>
+<p>I recently picked up an AMI R-89 jukebox. It is a combo unit, plays both 45 rpm records and CDs. It looked to be in full working order, was full of music, and only $400. I have always wanted a jukebox, but I also wanted to be able to easily play any music through it. I’ve found a way, and it feels like the future!</p>
+<h2 id="cd-player">CD Player</h2>
+<p>In order to play CDs, the jukebox comes with a Philips 6-disc CD player. It has RCA audio outputs, and also has a few control wires so the jukebox controller board can tell the player which track to play. My first attempt to play my own music was just to put my own CDs in the player, but (I think) because the CD player had not been used for a long time, it was constantly skipping and freezing up.</p>
+<h2 id="headphone-to-rca">Headphone to RCA</h2>
+<p>I unplugged the RCA outputs from the CD player, and hooked up a 3.5MM headphone to RCA cable. This let me then plug my iPhone in and try to play music through it. It worked, with one major caveat: the amplifier is muted unless it is told by the jukebox that 1) a record is playing or 2) a CD is playing. Because neither of those things were happening, no sound comes through the speakers. This is easy to get around, temporarily, by just telling the jukebox to play a CD track. This only works until that song is over, then the amplifier mutes again.</p>
+<h2 id="wiring-diagrams-and-cutting-the-orange-wire">Wiring Diagrams and Cutting the Orange Wire</h2>
+<p>By complete luck, the jukebox came with a 3-ring binder full of manuals. Inside one of the books is a step-by-step breakdown of what happens inside the jukebox when a selection is made. Following this, I found that the amplifier is constantly being sent a mute signal on one wire. When a song is playing, there is no signal sent through that wire. That then tells the amplifier to un-mute so we can hear the song. This seemed almost backwards to me, but it’s actually perfect. All I needed to do was cut that mute wire, and the amplifier is then always un-muted. This isn’t perfect, there is a slight hum when nothing is playing, but I can live with that.</p>
+<h2 id="worked-great-for-20-minutes">Worked Great for 20 Minutes</h2>
+<p>The above setup was awesome, until 20 minutes in when the jukebox would automatically choose a record to play. It has an “Autoplay” setting, and after 20 minutes of inactivity (because the jukebox has no idea that the iPhone is playing music) it will choose a song at random. Fortunately, again using the manuals, I found a Programming Guide that allowed me to completely disable the Autoplay feature.</p>
+<h2 id="chromecast-audio">Chromecast Audio</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/chromecast-audio.jpg" alt="Chromecast Audio"></p>
+<p>The iPhone worked well, but any time a text message or phone call would come in, the music would pause. It also just looked ugly, either the jukebox needed to be open or the iPhone shoved inside to work. I decided to pick up a Google Chromecast Audio. We have a couple of regular Chromecasts in the house, but didn’t have any of the audio-only versions. It plugs into power inside the jukebox, where the CD player used to go. This means that the jukebox still only has 1 power cord coming out of it. The Chromecast Audio uses WiFi, so it was extremely easy to set up. I named it “Jukebox” and could then stream Spotify from my iPhone to it. This was much easier than needing to leave my phone inside the jukebox.</p>
+<h2 id="ok-google">&ldquo;Ok, Google&rdquo;</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/google-home.jpg" alt="Google home"></p>
+<p>I received a Google Home for Christmas, and it tied this project up into the perfect bow. Because the Home has built-in Google Cast support, I can simply say “Ok, Google, play music on the jukebox” and a few seconds later the jukebox starts playing music. The cool part about the Google Cast/Home ecosystem is that
+they don’t lock you into their music provider. I was able to connect my Home to my Spotify Premium account, and the Home then knows to use it for music. You don’t have to say “Play music from Spotify”, just “Play music”. It feels very natural. The other benefit is that you can do all of this from your phone or computer, Spotify has great Google Cast support. The Google Home “hands-free” part is just icing on the cake!</p>
+<h2 id="next-step-maybe">Next Step, Maybe</h2>
+<p><img src="/images/ok-google-play-music-on-the-jukebox/smartthings.jpg" alt="Samsung Smartthings"></p>
+<p>Time will tell how much I actually use this, but the next step might be to look into plugging the jukebox into one of these new “smart” power plugs. Google Home supports the SmartThings Hub from Samsung, and then I would be able to turn on the jukebox, wait a few seconds for the Chromecast to boot up, and then have it play music, all hands-free. But for now, this current setup is perfect for me.</p>
+<h2 id="outro">Outro</h2>
+<p>This was such a fun (and easy) project. Like I said, I have wanted a jukebox for a long time, and I love that this still looks and works like a normal jukebox (45s still play just fine!) while being able to instantly stream almost any song to it.</p>
+<!-- raw HTML omitted -->
+]]></content:encoded>
+      <source:markdown>
+## Intro
+
+![Jukebox](/images/ok-google-play-music-on-the-jukebox/jukebox.jpg)
+
+I recently picked up an AMI R-89 jukebox. It is a combo unit, plays both 45 rpm records and CDs. It looked to be in full working order, was full of music, and only $400. I have always wanted a jukebox, but I also wanted to be able to easily play any music through it. I’ve found a way, and it feels like the future!
+
+&lt;!-- TEASER_END --&gt;
+
+## CD Player
+
+In order to play CDs, the jukebox comes with a Philips 6-disc CD player. It has RCA audio outputs, and also has a few control wires so the jukebox controller board can tell the player which track to play. My first attempt to play my own music was just to put my own CDs in the player, but (I think) because the CD player had not been used for a long time, it was constantly skipping and freezing up.
+
+## Headphone to RCA
+
+I unplugged the RCA outputs from the CD player, and hooked up a 3.5MM headphone to RCA cable. This let me then plug my iPhone in and try to play music through it. It worked, with one major caveat: the amplifier is muted unless it is told by the jukebox that 1) a record is playing or 2) a CD is playing. Because neither of those things were happening, no sound comes through the speakers. This is easy to get around, temporarily, by just telling the jukebox to play a CD track. This only works until that song is over, then the amplifier mutes again.
+
+## Wiring Diagrams and Cutting the Orange Wire
+
+By complete luck, the jukebox came with a 3-ring binder full of manuals. Inside one of the books is a step-by-step breakdown of what happens inside the jukebox when a selection is made. Following this, I found that the amplifier is constantly being sent a mute signal on one wire. When a song is playing, there is no signal sent through that wire. That then tells the amplifier to un-mute so we can hear the song. This seemed almost backwards to me, but it’s actually perfect. All I needed to do was cut that mute wire, and the amplifier is then always un-muted. This isn’t perfect, there is a slight hum when nothing is playing, but I can live with that.
+
+## Worked Great for 20 Minutes
+
+The above setup was awesome, until 20 minutes in when the jukebox would automatically choose a record to play. It has an “Autoplay” setting, and after 20 minutes of inactivity (because the jukebox has no idea that the iPhone is playing music) it will choose a song at random. Fortunately, again using the manuals, I found a Programming Guide that allowed me to completely disable the Autoplay feature.
+
+## Chromecast Audio
+
+![Chromecast Audio](/images/ok-google-play-music-on-the-jukebox/chromecast-audio.jpg)
+
+The iPhone worked well, but any time a text message or phone call would come in, the music would pause. It also just looked ugly, either the jukebox needed to be open or the iPhone shoved inside to work. I decided to pick up a Google Chromecast Audio. We have a couple of regular Chromecasts in the house, but didn’t have any of the audio-only versions. It plugs into power inside the jukebox, where the CD player used to go. This means that the jukebox still only has 1 power cord coming out of it. The Chromecast Audio uses WiFi, so it was extremely easy to set up. I named it “Jukebox” and could then stream Spotify from my iPhone to it. This was much easier than needing to leave my phone inside the jukebox.
+
+## &#34;Ok, Google&#34;
+
+![Google home](/images/ok-google-play-music-on-the-jukebox/google-home.jpg)
+
+I received a Google Home for Christmas, and it tied this project up into the perfect bow. Because the Home has built-in Google Cast support, I can simply say “Ok, Google, play music on the jukebox” and a few seconds later the jukebox starts playing music. The cool part about the Google Cast/Home ecosystem is that
+they don’t lock you into their music provider. I was able to connect my Home to my Spotify Premium account, and the Home then knows to use it for music. You don’t have to say “Play music from Spotify”, just “Play music”. It feels very natural. The other benefit is that you can do all of this from your phone or computer, Spotify has great Google Cast support. The Google Home “hands-free” part is just icing on the cake!
+
+## Next Step, Maybe
+
+![Samsung Smartthings](/images/ok-google-play-music-on-the-jukebox/smartthings.jpg)
+
+Time will tell how much I actually use this, but the next step might be to look into plugging the jukebox into one of these new “smart” power plugs. Google Home supports the SmartThings Hub from Samsung, and then I would be able to turn on the jukebox, wait a few seconds for the Chromecast to boot up, and then have it play music, all hands-free. But for now, this current setup is perfect for me.
+
+## Outro
+
+This was such a fun (and easy) project. Like I said, I have wanted a jukebox for a long time, and I love that this still looks and works like a normal jukebox (45s still play just fine!) while being able to instantly stream almost any song to it.
+
+&lt;iframe width=&#34;800&#34; height=&#34;412&#34; src=&#34;https://www.youtube.com/embed/oj6bj6BnVsQ&#34; title=&#34;Ok Google, Play Music on the Jukebox&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</source:markdown>
+    </item>
+  </channel>
+</rss>

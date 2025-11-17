@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Python script to retrieve DHCP leases from Palo Alto firewall | Trevor Manternach</title>
+
+<meta property='og:title' content='Python script to retrieve DHCP leases from Palo Alto firewall - Trevor Manternach'>
+<meta property='og:description' content='I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30&#43; seconds after login to give me a prompt.
+To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like jq to filter it quickly.'>
+<meta property='og:url' content='http://localhost:1313/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/'>
+<meta property='og:site_name' content='Trevor Manternach'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:published_time' content='2023-11-03T16:50:34-06:00'><meta property='article:modified_time' content='2023-11-03T16:50:34-06:00'><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@'><meta name='twitter:creator' content='@'>
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="canonical" href="http://localhost:1313/2023/11/03/python-script-to-retrieve-dhcp-leases-from-palo-alto-firewall/">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <nav id="nav-main" class="nav">
+      <div id="nav-name" class="nav-left">
+        <a id="nav-anchor" class="nav-item" href="http://localhost:1313/">
+          <h1 id="nav-heading" class="title is-4">Trevor Manternach</h1>
+        </a>
+      </div>
+      
+      <div class="nav-right"><a class="nav-item" href="/about">
+          <h2 class="title is-5">About</h2>
+        </a><a class="nav-item" href="/blogroll">
+          <h2 class="title is-5">Blogroll</h2>
+        </a><a class="nav-item" href="feed.xml">
+          <h2 class="title is-5">RSS</h2>
+        </a><div class="searchform nav-item" role="search">                   
+          
+          <form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+          <input type="hidden" name="sites" value="https://trevormanternach.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" size="10" placeholder="Search..." class="span2">
+          </form>
+          
+        </div>
+      </div>
+      
+    </nav>
+
+    <nav class="nav">
+      
+    </nav>
+
+  </div>
+  <script src="/js/navicon-shift.js"></script>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle tags is-6 is-pulled-right">
+      
+    </div>
+    
+    <h2 class="subtitle is-6">November 3, 2023</h2>
+    
+    <h1 class="title">Python script to retrieve DHCP leases from Palo Alto firewall</h1>
+    
+    <div class="content">
+      <p>I have been using a Palo Alto PA-220 firewall for my home router for years. It is my DHCP server for my LAN. I often find myself needing to view the DHCP leases to see what IP address some random device (WLED, ESPHome devices, etc.) has. The web interface for the PA-220 is unbearably slow and the SSH CLI takes 30+ seconds after login to give me a prompt.</p>
+<p>To speed up this task, I wrote this fairly simple script using python3. It uses the REST API that PAN-OS has to retrieve the DHCP leases. This script completes for me in less than 1 second. It outputs a JSON object. This works best for me as I find JSON to be humanly-readable and also allows me to pipe it to a utility like <code>jq</code> to filter it quickly.</p>
+<p>Here is the code:</p>
+<pre tabindex="0"><code>import requests
+import json
+from xmltodict import parse, ParsingInterrupted
+from urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
+
+host = &#34;192.168.2.1&#34; # IP of Palo-Alto firewall goes here.
+key = &#34;KEY_GOES_HERE&#34; # Run `curl -X GET &#39;https://&lt;host&gt;/api/?type=keygen&amp;user=&lt;username&gt;&amp;password=&lt;password&gt;&#39;` to create API key.
+interface = &#34;ethernet1/2&#34; # can also use &#34;all&#34;
+
+def get_dhcp_leases(host, key, interface):
+	url = &#34;https://{host}/api/?type=op&amp;cmd=&lt;show&gt;&lt;dhcp&gt;&lt;server&gt;&lt;lease&gt;&lt;interface&gt;{interface}&lt;/interface&gt;&lt;/lease&gt;&lt;/server&gt;&lt;/dhcp&gt;&lt;/show&gt;&amp;key={key}&#34;.format(host=host, key=key, interface=interface)
+	response = requests.get(url,verify=False)
+	return response
+
+if __name__ == &#34;__main__&#34;:
+	dhcp_leases = get_dhcp_leases(host, key, interface)
+	data = parse(dhcp_leases.content)
+	entries = data[&#39;response&#39;][&#39;result&#39;]
+	print(json.dumps(entries, indent=4))
+</code></pre><p>I also have this hosted as a <a href="https://gist.github.com/tmanternach/21e3bba23261cbd5bacba2e50588acf6">gist</a> on github. Any changes I make to it are more likely to end up there than here. Comments are welcome over there, too!</p>
+
+      
+      <div class="related">
+</div>
+      
+    </div>
+    
+  </div>
+</section>
+
+    <script src="/js/copycode.js"></script>
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+    
+  </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+
