@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:source="https://source.scripting.com/">
+  <channel>
+    <title>Posts on Trevor Manternach</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Personal blog of Trevor Manternach</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>trevor@trevormanternach.com (Trevor Manternach)</managingEditor>
+    <webMaster>trevor@trevormanternach.com (Trevor Manternach)</webMaster>
+    <lastBuildDate>Tue, 30 Dec 2025 07:10:47 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Five 2005 Apps</title>
+      <link>http://localhost:1313/post/my-five-2005-apps/</link>
+      <pubDate>Tue, 30 Dec 2025 07:10:47 -0700</pubDate><author>trevor@trevormanternach.com (Trevor Manternach)</author>
+      <guid>http://localhost:1313/post/my-five-2005-apps/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Inspired by &lt;a href=&#34;https://512pixels.net/2025/12/five-apps-i-used-in-2005/&#34;&gt;this post&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was a sophomore in high school in 2005; just a couple of years into my hobby of technology. I wasn&amp;rsquo;t yet an Apple user (or even Linux, that would come in 2006), so my list of applications I was using 20 years ago is almost entirely Windows-based.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p><em>Inspired by <a href="https://512pixels.net/2025/12/five-apps-i-used-in-2005/">this post</a>.</em></p>
+<p>I was a sophomore in high school in 2005; just a couple of years into my hobby of technology. I wasn&rsquo;t yet an Apple user (or even Linux, that would come in 2006), so my list of applications I was using 20 years ago is almost entirely Windows-based.</p>
+<ol>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Yahoo_Messenger">Yahoo Messenger</a> / <a href="https://en.wikipedia.org/wiki/MSN_Messenger">MSN Messenger</a></strong>: I&rsquo;m putting these together. My hometown was very evenly split between Yahoo and MSN for instant messenging. I believe I had tried <a href="https://en.wikipedia.org/wiki/Trillian_(software)">Trillian</a> by 2005, but went back to the native applications because of the emoji-style features they had released that only worked in the native applications. Instant messenging was a huge part of my early computing life, and I feel like so much of that is lost these days where you can reach anybody at anytime of day.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Firefox">Firefox</a></strong>: I don&rsquo;t know when I started using Firefox, but it was probably in 2004 or early 2005. Outside of a decade stint starting in 2008 with Chrome, I&rsquo;ve been a daily Firefox user for my entire computing life. It&rsquo;s the best browser for me; it works like I expect a browser to work.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Picasa">Picasa</a></strong>: I had a Canon digital camera and was in love with Picasa. My memory is it wasn&rsquo;t a Google application at first; Google acquired them, but I don&rsquo;t think I ever used Picasa before Google bought it. The face-grouping features it had back then felt like a magic trick, and I loved that it kept originals untouched on your filesystem.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/ITunes">iTunes</a></strong>: I bought my first iPod in 2004 and was pretty quickly converted to an Apple fanboy. I remember running some free podcast catcher (&ldquo;podcatcher&rdquo; we used to say!), I think it was <a href="https://en.wikipedia.org/wiki/Juice_%28aggregator%29">iPodder</a>. I have a <a href="https://flickr.com/photos/trvr3307/22113658/">screenshot on my Flickr page</a> from June 2005 when iTunes was updated to support Podcasts. I can remember those days like it was yesterday, scrolling through the Podcast Directory and finding some gems.</p>
+</li>
+<li>
+<p><strong><a href="https://en.wikipedia.org/wiki/Kodi_(software)">XBMC</a></strong>: This is the only non-Windows program, but it has to be my favorite. I used a software-mod to modify my original Xbox; this had to be have been sometime in 2005. I have <a href="https://flickr.com/photos/trvr3307/81278576/">another picture on my Flickr</a> that shows me watching <a href="https://en.wikipedia.org/wiki/Diggnation">Diggnation</a> on XBMC on our 52&quot; rear-projection TV. XBMC was pretty life-changing for me, to be honest. It taught me a bunch about file sharing and FTP and video codecs, knowledge I still have and use today.</p>
+</li>
+</ol>]]></content:encoded>
+      <source:markdown>
+*Inspired by [this post](https://512pixels.net/2025/12/five-apps-i-used-in-2005/).*
+
+I was a sophomore in high school in 2005; just a couple of years into my hobby of technology. I wasn&#39;t yet an Apple user (or even Linux, that would come in 2006), so my list of applications I was using 20 years ago is almost entirely Windows-based.
+
+&lt;!--more--&gt;
+  1. **[Yahoo Messenger](https://en.wikipedia.org/wiki/Yahoo_Messenger) / [MSN Messenger](https://en.wikipedia.org/wiki/MSN_Messenger)**: I&#39;m putting these together. My hometown was very evenly split between Yahoo and MSN for instant messenging. I believe I had tried [Trillian](https://en.wikipedia.org/wiki/Trillian_(software)) by 2005, but went back to the native applications because of the emoji-style features they had released that only worked in the native applications. Instant messenging was a huge part of my early computing life, and I feel like so much of that is lost these days where you can reach anybody at anytime of day.
+  
+  2. **[Firefox](https://en.wikipedia.org/wiki/Firefox)**: I don&#39;t know when I started using Firefox, but it was probably in 2004 or early 2005. Outside of a decade stint starting in 2008 with Chrome, I&#39;ve been a daily Firefox user for my entire computing life. It&#39;s the best browser for me; it works like I expect a browser to work.
+  
+  3. **[Picasa](https://en.wikipedia.org/wiki/Picasa)**: I had a Canon digital camera and was in love with Picasa. My memory is it wasn&#39;t a Google application at first; Google acquired them, but I don&#39;t think I ever used Picasa before Google bought it. The face-grouping features it had back then felt like a magic trick, and I loved that it kept originals untouched on your filesystem.
+  
+  4. **[iTunes](https://en.wikipedia.org/wiki/ITunes)**: I bought my first iPod in 2004 and was pretty quickly converted to an Apple fanboy. I remember running some free podcast catcher (&#34;podcatcher&#34; we used to say!), I think it was [iPodder](https://en.wikipedia.org/wiki/Juice_%28aggregator%29). I have a [screenshot on my Flickr page](https://flickr.com/photos/trvr3307/22113658/) from June 2005 when iTunes was updated to support Podcasts. I can remember those days like it was yesterday, scrolling through the Podcast Directory and finding some gems.
+  
+  5. **[XBMC](https://en.wikipedia.org/wiki/Kodi_(software))**: This is the only non-Windows program, but it has to be my favorite. I used a software-mod to modify my original Xbox; this had to be have been sometime in 2005. I have [another picture on my Flickr](https://flickr.com/photos/trvr3307/81278576/) that shows me watching [Diggnation](https://en.wikipedia.org/wiki/Diggnation) on XBMC on our 52&#34; rear-projection TV. XBMC was pretty life-changing for me, to be honest. It taught me a bunch about file sharing and FTP and video codecs, knowledge I still have and use today.</source:markdown>
+    </item>
+  </channel>
+</rss>
